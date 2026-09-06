@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كتالوج العاب سيبر بطرس</title>
+    
+    <!-- استيراد ملف الـ Manifest والـ Theme Color في مكانهم الصحيح -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#007bff">
+
+    <!-- استيراد خط عالي الجودة من جوجل -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* المتغيرات الخاصة بالوضع العادي (Light Mode) */
+        :root {
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #222222;
+            --header-color: #111111;
+            --input-bg: #fafafa;
+            --input-border: #e0e0e0;
+            --shadow-color: rgba(0, 0, 0, 0.06);
+            --neon-color: #00d4ff;
+        }
+
+        /* المتغيرات الخاصة بوضع الظلام (Dark Mode) */
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #f1f1f1;
+            --header-color: #ffffff;
+            --input-bg: #2a2a2a;
+            --input-border: #444444;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+            --neon-color: #00ffcc;
+        }
+
+        /* إعدادات الصفحة الأساسية */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Cairo', sans-serif;
+            color: var(--text-color);
+            padding-bottom: 50px;
+        }
+
+        /* 1. شريط الترحيب المتحرك أعلى الصفحة */
+        .marquee-banner {
+            background: linear-gradient(90deg, #007bff, #00d4ff, #6610f2);
+            color: #fff;
+            padding: 10px 0;
+            font-weight: 600;
+            font-size: 0.95rem;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+
+        .marquee-banner marquee {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* حاوية زر الثيم والتحكم العلوي */
+        .top-bar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 15px;
+        }
+
+        /* زر تبديل الوضع المظلم */
+        .theme-toggle-btn {
+            background: var(--card-bg);
+            border: 2px solid var(--input-border);
+            color: var(--text-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s ease, border-color 0.3s ease;
+        }
+
+        .theme-toggle-btn:hover {
+            transform: scale(1.05);
+            border-color: #007bff;
+        }
+
+        /* تنسيق العنوان وتوهج النيون */
+        .catalog-header {
+            text-align: center;
+            margin-bottom: 15px;
+            padding: 0 15px;
+        }
+
+        .catalog-header h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--header-color);
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            text-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+        }
+
+        /* خط جمالي متوهج تحت العنوان */
+        .catalog-header h1::after {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 4px;
+            background: linear-gradient(90deg, #007bff, #00d4ff);
+            bottom: 0;
+            left: 15%;
+            border-radius: 2px;
+            box-shadow: 0 0 10px var(--neon-color);
+        }
+
+        /* العدّاد التفاعلي المباشر */
+        .live-counter {
+            text-align: center;
+            font-size: 1.05rem;
+            color: #007bff;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        [data-theme="dark"] .live-counter {
+            color: #00ffcc;
+        }
+
+        /* قسم البحث */
+        .controls-container {
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* صندوق البحث */
+        .search-box {
+            width: 100%;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px 15px 50px;
+            font-size: 1rem;
+            font-family: 'Cairo', sans-serif;
+            border: 2px solid var(--input-border);
+            border-radius: 30px;
+            outline: none;
+            transition: all 0.3s ease;
+            background-color: var(--input-bg);
+            color: var(--text-color);
+        }
+
+        .search-box input:focus {
+            border-color: #007bff;
+            box-shadow: 0 5px 20px rgba(0, 123, 255, 0.15);
+        }
+
+        /* أيقونة البحث */
+        .search-box::after {
+            content: '🔍';
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.1rem;
+        }
+
+        /* تخطيط شبكي للكتالوج */
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* بطاقة الصورة مع تأثير 3D */
+        .catalog-item {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
+            perspective: 1000px;
+            cursor: pointer;
+            border: 1px solid var(--input-border);
+        }
+
+        .catalog-item:hover {
+            transform: translateY(-10px) rotateX(3deg) rotateY(-3deg);
+            box-shadow: -15px 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* حاوية الصورة */
+        .image-wrapper {
+            width: 100%;
+            height: 240px;
+            background-color: var(--input-bg);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        /* عرض الصورة بالكامل دون قص */
+        .image-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.6s ease;
+        }
+
+        .catalog-item:hover .image-wrapper img {
+            transform: scale(1.08);
+        }
+
+        /* تفاصيل البطاقة */
+        .item-content {
+            padding: 18px;
+            text-align: center;
+            background: var(--card-bg);
+        }
+
+        .item-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .catalog-item:hover .item-title {
+            color: #007bff;
+        }
+
+        [data-theme="dark"] .catalog-item:hover .item-title {
+            color: #00ffcc;
+        }
+
+        /* زر الاتصال */
+        .item-phone {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #28a745;
+            background-color: #e8f5e9;
+            padding: 6px 14px;
+            border-radius: 20px;
+            direction: ltr;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .item-phone:hover {
+            background-color: #d0f0d4;
+            transform: scale(1.03);
+        }
+
+        [data-theme="dark"] .item-phone {
+            background-color: rgba(40, 167, 69, 0.2);
+            color: #4cd964;
+        }
+
+        /* 3. زر الواتساب العائم المتحرك */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background-color: #25d366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15) rotate(10deg);
+            background-color: #20ba5a;
+        }
+
+        @keyframes pulse-whatsapp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* رسالة عدم وجود نتائج */
+        .no-results {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 40px;
+            font-size: 1.2rem;
+            color: #888;
+            display: none;
+        }
+    </style>
+</head>
+<body data-theme="light">
+
+    <!-- 2. شريط الترحيب المتحرك (Marquee) -->
+    <div class="marquee-banner">
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+            🔥 أهلاً بكم في سيبر بطرس للألعاب! أحدث ألعاب PS4 متوفرة الآن بأعلى جودة. اطلب لعبتك المفضلة عبر الاتصال بالرقم أو واتساب فوراً! 🎮
+        </marquee>
+    </div>
+
+    <!-- زر التحكم بالوضع المظلم -->
+    <div class="top-bar">
+        <button class="theme-toggle-btn" id="themeToggleBtn">
+            <span id="themeIcon">🌙</span> <span id="themeText">الوضع المظلم</span>
+        </button>
+    </div>
+
+    <!-- العنوان وتوهج النيون -->
+    <header class="catalog-header">
+        <h1>الكتالوج الخاص بسيبر بطرس</h1>
+    </header>
+
+    <!-- العدّاد التفاعلي المباشر -->
+    <div class="live-counter" id="liveCounter">
+        متاح حالياً 21 لعبة قوية في الكتالوج
+    </div>
+
+    <!-- شريط البحث -->
+    <div class="controls-container">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="ابحث عن اسم المنتج...">
+        </div>
+    </div>
+
+    <!-- شبكة الصور -->
+    <main class="catalog-grid" id="catalogGrid">
+        
+        <!-- العنصر الأول -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://c.top4top.io/p_3901pzliu1.jpg" alt="صورة 1">
+            </div>
+            <div class="item-content">
+                <div class="item-title">Ghost of Tsushima Director's Cut</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر الثاني -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://d.top4top.io/p_390134w3c2.jpg" alt="صورة 2">
+            </div>
+            <div class="item-content">
+                <div class="item-title">It Takes Two</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر الثالث -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://e.top4top.io/p_3901q34hn3.jpg" alt="صورة 3">
+            </div>
+            <div class="item-content">
+                <div class="item-title">Need.for.Speed</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر الرابع -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://f.top4top.io/p_39011o95b4.jpg" alt="صورة 4">
+            </div>
+            <div class="item-content">
+                <div class="item-title">Road Redemption</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر الخامس -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://i.top4top.io/p_3901pyskn1.jpg" alt="صورة 5">
+            </div>
+            <div class="item-content">
+                <div class="item-title">Rocket League</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر السادس -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://j.top4top.io/p_39015isx62.jpg" alt="صورة 6">
+            </div>
+            <div class="item-content">
+                <div class="item-title">Stray</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر السابع -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://k.top4top.io/p_3901u7n1j3.png" alt="صورة 7">
+            </div>
+            <div class="item-content">
+                <div class="item-title">UNCHARTED THE LOST LEGACY</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر الثامن -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://l.top4top.io/p_39010h2i64.jpg" alt="صورة 8">
+            </div>
+            <div class="item-content">
+                <div class="item-title">World.War-Z</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر التاسع -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://d.top4top.io/p_3901j84ec1.jpg" alt="صورة 9">
+            </div>
+            <div class="item-content">
+                <div class="item-title">wwe 25</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر العاشر -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://e.top4top.io/p_3901ialkg2.jpg" alt="صورة 10">
+            </div>
+            <div class="item-content">
+                <div class="item-title">بيس 19</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر الحادي عشر -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://f.top4top.io/p_3901wybzj3.jpg" alt="صورة 11">
+            </div>
+            <div class="item-content">
+                <div class="item-title">بيس 26</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر الثاني عشر -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://g.top4top.io/p_390174bxc4.jpg" alt="صورة 12">
+            </div>
+            <div class="item-content">
+                <div class="item-title">بيس 27</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر الثالث عشر -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://i.top4top.io/p_3901vluf61.jpg" alt="صورة 13">
+            </div>
+            <div class="item-content">
+                <div class="item-title">تكن</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر الرابع عشر -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://j.top4top.io/p_3901zm4pr2.jpg" alt="صورة 14">
+            </div>
+            <div class="item-content">
+                <div class="item-title">جاتا</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر الخامس عشر -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://k.top4top.io/p_3901ct7ei3.jpg" alt="صورة 15">
+            </div>
+            <div class="item-content">
+                <div class="item-title">سبايدر مان</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر السادس عشر -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://l.top4top.io/p_3901ikllu4.jpg" alt="صورة 16">
+            </div>
+            <div class="item-content">
+                <div class="item-title">فيفا 26</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر السابع عشر -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://f.top4top.io/p_3901n6ttk1.jpg" alt="صورة 17">
+            </div>
+            <div class="item-content">
+                <div class="item-title">كراش</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر الثامن عشر -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://g.top4top.io/p_3901zq3kw2.jpg" alt="صورة 18">
+            </div>
+            <div class="item-content">
+                <div class="item-title">كول اوف ديوتي بلاك اوبس 3</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر التاسع عشر -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://h.top4top.io/p_3901qd01c3.jpg" alt="صورة 19">
+            </div>
+            <div class="item-content">
+                <div class="item-title">كول اوف ديوتي بلاك اوبس 4</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر العشرون -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://i.top4top.io/p_39015vwej4.jpg" alt="صورة 20">
+            </div>
+            <div class="item-content">
+                <div class="item-title">مورتال كومبات</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+
+        <!-- العنصر الواحد والعشرون -->
+        <div class="catalog-item">
+            <div class="image-wrapper">
+                <img src="https://j.top4top.io/p_3901x0lmb5.jpg" alt="صورة 21">
+            </div>
+            <div class="item-content">
+                <div class="item-title">ناروتو</div>
+                <a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a>
+            </div>
+        </div>
+		        
+        <!-- رسالة عدم وجود نتائج -->
+        <div class="no-results" id="noResults">عذراً، لم يتم العثور على أي نتائج مطابقة لبحثك.</div>
+
+    </main>
+
+    <!-- 3. زر الواتساب العائم -->
+    <a href="https://wa.me/2001022571269" class="whatsapp-float" target="_blank" title="تواصل عبر واتساب">
+        💬
+    </a>
+
+    <!-- كود JavaScript الذكي للبحث، الوضع المظلم، والعداد الحي -->
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const catalogItems = document.querySelectorAll('.catalog-item');
+        const noResults = document.getElementById('noResults');
+        const liveCounter = document.getElementById('liveCounter');
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeIcon = document.getElementById('themeIcon');
+        const themeText = document.getElementById('themeText');
+        const body = document.body;
+
+        // دالة تحديث عداد الألعاب المتوفرة بناءً على المرئي في البحث أو العدد الكلي
+        function updateCounter() {
+            let visibleCount = 0;
+            let totalCount = catalogItems.length;
+
+            catalogItems.forEach(item => {
+                if (item.style.display !== 'none') {
+                    visibleCount++;
+                }
+            });
+
+            // لو خانة البحث فارغة، اعرض العدد الكلي للإلعاب
+            if (searchInput.value.trim() === '') {
+                liveCounter.textContent = `متاح حالياً ${totalCount} لعبة قوية في الكتالوج`;
+                noResults.style.display = 'none';
+            } else {
+                if (visibleCount > 0) {
+                    liveCounter.textContent = `تم العثور على ${visibleCount} لعبة مطابقة`;
+                    noResults.style.display = 'none';
+                } else {
+                    noResults.style.display = 'block';
+                    liveCounter.textContent = `لا توجد نتائج مطابقة`;
+                }
+            }
+        }
+
+        // تشغيل العداد تلقائياً عند فتح الصفحة
+        updateCounter();
+
+        // كود البحث الفوري
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+
+            catalogItems.forEach(item => {
+                const title = item.querySelector('.item-title').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            updateCounter();
+        });
+
+        // تفعيل زر الوضع المظلم / النهاري
+        themeToggleBtn.addEventListener('click', () => {
+            if (body.getAttribute('data-theme') === 'light') {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'الوضع الفاتح';
+            } else {
+                body.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'الوضع المظلم';
+            }
+        });
+    </script>
+
+    <!-- كود تسجيل الـ Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then((reg) => console.log('Service Worker registered!'))
+            .catch((err) => console.log('Service Worker error: ', err));
+        });
+      }
+    </script>
+</body>
+</html>
