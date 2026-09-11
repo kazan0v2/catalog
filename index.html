@@ -55,7 +55,6 @@
         }
         #tickerTrack { position: relative; width: 100%; height: 100%; }
         
-        /* [التعديل الوحيد]: تغيير direction من ltr إلى rtl لإصلاح ترتيب الجملة */
         #tickerText {
             display: inline-block;
             white-space: nowrap;
@@ -63,7 +62,7 @@
             top: 50%;
             left: 0;
             transform: translateY(-50%);
-            direction: rtl; /* [تم التعديل هنا] */
+            direction: rtl;
             will-change: left;
             font-size: 1.05rem;
             font-weight: 700;
@@ -78,13 +77,24 @@
         .ticker-dot.active { background-color: #007bff; width: 24px; border-radius: 6px; }
         [data-theme="dark"] .ticker-dot.active { background-color: #00ffcc; }
 
-        /* باقي التنسيقات (بدون تغيير) */
         .top-bar { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: flex-end; margin-bottom: 15px; }
         .theme-toggle-btn { background: var(--card-bg); border: 2px solid var(--input-border); color: var(--text-color); padding: 8px 16px; border-radius: 20px; cursor: pointer; font-family: 'Cairo', sans-serif; font-weight: 600; box-shadow: 0 4px 10px var(--shadow-color); display: flex; align-items: center; gap: 8px; transition: transform 0.2s ease, border-color 0.3s ease; }
         .theme-toggle-btn:hover { transform: scale(1.05); border-color: #007bff; }
         .catalog-header { text-align: center; margin-bottom: 15px; padding: 0 15px; }
         .catalog-header h1 { font-size: 2.8rem; font-weight: 900; color: var(--header-color); letter-spacing: 1px; position: relative; display: inline-block; padding-bottom: 10px; text-shadow: 0 0 15px rgba(0,212,255,0.2); }
         .catalog-header h1::after { content: ''; position: absolute; width: 70%; height: 4px; background: linear-gradient(90deg, #007bff, #00d4ff); bottom: 0; left: 15%; border-radius: 2px; box-shadow: 0 0 10px var(--neon-color); }
+        
+        /* تنسيق الجملة المضافة حديثاً */
+        .sub-announcement {
+            text-align: center;
+            font-size: 1.15rem;
+            color: #28a745;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(40,167,69,0.2);
+        }
+        [data-theme="dark"] .sub-announcement { color: #4cd964; }
+
         .live-counter { text-align: center; font-size: 1.05rem; color: #007bff; font-weight: 700; margin-bottom: 30px; }
         [data-theme="dark"] .live-counter { color: #00ffcc; }
         .controls-container { max-width: 600px; margin: 0 auto 40px auto; padding: 0 20px; display: flex; justify-content: center; }
@@ -129,17 +139,24 @@
             <span id="themeIcon">🌙</span> <span id="themeText">الوضع المظلم</span>
         </button>
     </div>
+    
     <header class="catalog-header">
         <h1>اختار العابك من الكتالوج وانقلها على جهازك</h1>
     </header>
-    <div class="live-counter" id="liveCounter">متاح حالياً 21 لعبة قوية في الكتالوج</div>
+
+    <!-- الجملة الجديدة المضافة فوق جملة العدّاد -->
+    <div class="sub-announcement">🔧 خدمة تعديل أجهزة PS4 متاحة الآن! 🚀 (من سوفت 6 وحتى سوفت 13) بأمان تام وبأفضل سعر 🎯</div>
+    
+    <div class="live-counter" id="liveCounter">متاح حالياً 27 لعبة قوية في الكتالوج</div>
+
     <div class="controls-container">
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="ابحث عن اسم المنتج...">
         </div>
     </div>
+
     <main class="catalog-grid" id="catalogGrid">
-        <!-- 21 لعبة -->
+        <!-- 27 لعبة -->
         <div class="catalog-item"><div class="image-wrapper"><img src="https://c.top4top.io/p_3901pzliu1.jpg" alt="صورة 1"></div><div class="item-content"><div class="item-title">Ghost of Tsushima Director's Cut</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
         <div class="catalog-item"><div class="image-wrapper"><img src="https://d.top4top.io/p_390134w3c2.jpg" alt="صورة 2"></div><div class="item-content"><div class="item-title">It Takes Two</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
         <div class="catalog-item"><div class="image-wrapper"><img src="https://e.top4top.io/p_3901q34hn3.jpg" alt="صورة 3"></div><div class="item-content"><div class="item-title">Need.for.Speed</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
@@ -161,19 +178,19 @@
         <div class="catalog-item"><div class="image-wrapper"><img src="https://h.top4top.io/p_3901qd01c3.jpg" alt="صورة 19"></div><div class="item-content"><div class="item-title">كول اوف ديوتي بلاك اوبس 4</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
         <div class="catalog-item"><div class="image-wrapper"><img src="https://i.top4top.io/p_39015vwej4.jpg" alt="صورة 20"></div><div class="item-content"><div class="item-title">مورتال كومبات</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
         <div class="catalog-item"><div class="image-wrapper"><img src="https://g.top4top.io/p_390620h8n1.jpg" alt="صورة 21"></div><div class="item-content"><div class="item-title">Naruto.Shippuden.Ultimate.Ninja.Storm.4</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
-		<div class="catalog-item"><div class="image-wrapper"><img src="https://i.top4top.io/p_3906gnadn1.jpg" alt="صورة 20"></div><div class="item-content"><div class="item-title">car mechanic simulator</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
-		<div class="catalog-item"><div class="image-wrapper"><img src="https://f.top4top.io/p_39060inhz1.jpg" alt="صورة 20"></div><div class="item-content"><div class="item-title">Dynamic Days Gone</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
-		<div class="catalog-item"><div class="image-wrapper"><img src="https://f.top4top.io/p_390612s6e1.jpg" alt="صورة 20"></div><div class="item-content"><div class="item-title">Red.Dead.Redemption 1</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
-		<div class="catalog-item"><div class="image-wrapper"><img src="https://g.top4top.io/p_3906hdln72.png" alt="صورة 20"></div><div class="item-content"><div class="item-title">Red.Dead.Redemption 2</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
-		<div class="catalog-item"><div class="image-wrapper"><img src="https://j.top4top.io/p_39062fma91.jpg" alt="صورة 20"></div><div class="item-content"><div class="item-title">toy story 3</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
-		<div class="catalog-item"><div class="image-wrapper"><img src="https://a.top4top.io/p_3906o2s2j1.jpg" alt="صورة 20"></div><div class="item-content"><div class="item-title">Neighbours Back From Hell</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
+		<div class="catalog-item"><div class="image-wrapper"><img src="https://i.top4top.io/p_3906gnadn1.jpg" alt="صورة 22"></div><div class="item-content"><div class="item-title">car mechanic simulator</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
+		<div class="catalog-item"><div class="image-wrapper"><img src="https://f.top4top.io/p_39060inhz1.jpg" alt="صورة 23"></div><div class="item-content"><div class="item-title">Dynamic Days Gone</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
+		<div class="catalog-item"><div class="image-wrapper"><img src="https://f.top4top.io/p_390612s6e1.jpg" alt="صورة 24"></div><div class="item-content"><div class="item-title">Red.Dead.Redemption 1</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
+		<div class="catalog-item"><div class="image-wrapper"><img src="https://g.top4top.io/p_3906hdln72.png" alt="صورة 25"></div><div class="item-content"><div class="item-title">Red.Dead.Redemption 2</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
+		<div class="catalog-item"><div class="image-wrapper"><img src="https://j.top4top.io/p_39062fma91.jpg" alt="صورة 26"></div><div class="item-content"><div class="item-title">toy story 3</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
+		<div class="catalog-item"><div class="image-wrapper"><img src="https://a.top4top.io/p_3906o2s2j1.jpg" alt="صورة 27"></div><div class="item-content"><div class="item-title">Neighbours Back From Hell</div><a href="tel:01022571269" class="item-phone">📞 <span>01022571269</span></a></div></div>
         <div class="no-results" id="noResults">عذراً، لم يتم العثور على أي نتائج مطابقة لبحثك.</div>
     </main>
 
     <a href="https://wa.me/2001022571269" class="whatsapp-float" target="_blank" title="تواصل عبر واتساب">💬</a>
 
     <script>
-        // ========== الشريط المتحرك (من الشمال لليمين مع توقف بسيط) ==========
+        // ========== الشريط المتحرك ==========
         const messages = [
             "أهلاً و سهلاً ومرحباً بكم 😍",
             "🎮 أحدث ألعاب PS4 متوفرة الآن بأعلى جودة. 🔥تصفح الكتالوج واختر لعبتك بأقل الاسعار🔥. اطلب لعبتك المفضلة عبر الاتصال بالرقم أو واتساب فوراً!📞",
@@ -182,11 +199,10 @@
         ];
 
         let currentIndex = 0;
-        let position = 0; // الموضع الحالي
-        let endX = 0;     // الموضع النهائي
-        let speed = 100;  // بكسل في الثانية
+        let position = 0;
+        let endX = 0;
+        let speed = 100;
 
-        // [تم تعديل الطلب]: تقليل مدة التوقف إلى ثانية واحدة فقط
         let pauseDuration = 500; 
         let pauseRemaining = 0;
 
@@ -215,16 +231,14 @@
         function updateDimensions() {
             containerWidth = tickerContainer.offsetWidth;
             textWidth = getTextWidth(messages[currentIndex]);
-            // النهاية عند خروج النص من جهة اليمين
             endX = containerWidth;
         }
 
         function startCurrentSlide() {
             updateDimensions();
-            // [تم تعديل الطلب]: البدء من أقصى الشمال
             position = -textWidth; 
             tickerText.textContent = messages[currentIndex];
-            tickerText.style.left = position + 'px'; // استخدام left بدلاً من transform
+            tickerText.style.left = position + 'px';
             updateDots();
             if (animationId) cancelAnimationFrame(animationId);
             lastTimestamp = null;
@@ -254,7 +268,6 @@
                 position = endX;
                 tickerText.style.left = position + 'px';
 
-                // [تم إصلاح الطلب]: التوقف الفعلي هنا
                 if (pauseRemaining > 0) {
                     pauseRemaining -= delta * 1000;
                     animationId = requestAnimationFrame(animateStep);
@@ -263,7 +276,7 @@
 
                 currentIndex = (currentIndex + 1) % messages.length;
                 updateDimensions();
-                position = -textWidth; // نعيد البداية من أقصى الشمال
+                position = -textWidth;
                 tickerText.textContent = messages[currentIndex];
                 tickerText.style.left = position + 'px';
                 updateDots();
@@ -304,13 +317,8 @@
             startCurrentSlide();
         }
 
-        tickerContainer.addEventListener('mouseenter', () => {
-            isPaused = true;
-        });
-        tickerContainer.addEventListener('mouseleave', () => {
-            isPaused = false;
-            lastTimestamp = null;
-        });
+        tickerContainer.addEventListener('mouseenter', () => { isPaused = true; });
+        tickerContainer.addEventListener('mouseleave', () => { isPaused = false; lastTimestamp = null; });
 
         let resizeTimeout;
         window.addEventListener('resize', () => {
@@ -324,7 +332,7 @@
         createDots();
         startCurrentSlide();
 
-        // ========== باقي الكود (البحث، الوضع المظلم، العدّاد) ==========
+        // ========== البحث، الوضع المظلم، العدّاد ==========
         const searchInput = document.getElementById('searchInput');
         const catalogItems = document.querySelectorAll('.catalog-item');
         const noResults = document.getElementById('noResults');
