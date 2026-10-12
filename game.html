@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تفاصيل اللعبة | كتالوج PS4</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f7f6;--card:#fff;--ink:#222;--muted:#64748b;--border:#e0e0e0;--accent:#007bff}
+[data-theme="dark"]{--bg:#121212;--card:#1e1e1e;--ink:#f1f1f1;--muted:#b7b7b7;--border:#444;--accent:#00ffcc}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Cairo,sans-serif;min-height:100vh}
+a{color:inherit}.wrap{max-width:1000px;margin:auto;padding:25px 18px 65px}.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:25px;flex-wrap:wrap}.back,.theme{font-family:inherit;border:1px solid var(--border);background:var(--card);color:var(--ink);padding:9px 17px;border-radius:25px;text-decoration:none;font-weight:700;cursor:pointer}
+.card{border:1px solid var(--border);background:var(--card);box-shadow:0 10px 30px rgba(0,0,0,.06);border-radius:20px;padding:25px}.head{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center}.cover{width:100%;max-height:360px;object-fit:contain;border-radius:12px;background:var(--bg);padding:12px}.eyebrow{color:var(--accent);font-size:.9rem;font-weight:900}.meta-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0 14px}.title{font-size:clamp(1.45rem,4vw,2.4rem);line-height:1.5;margin:0;overflow-wrap:anywhere}.detail-badge{display:inline-flex;align-items:center;background:linear-gradient(135deg,#ff3b30,#d90429);color:#fff;padding:7px 14px;border-radius:999px;font-size:.88rem;font-weight:800;box-shadow:0 8px 18px rgba(217,4,41,.25)}.detail-badge[hidden]{display:none!important}.desc{white-space:pre-line;line-height:2;color:var(--muted);font-size:1.05rem}.contact{display:inline-block;margin-top:20px;background:#25d366;color:white;padding:10px 22px;border-radius:25px;text-decoration:none;font-weight:800}.video-section{margin-top:35px}.video-section[hidden]{display:none!important}.video-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:15px;overflow:hidden;background:#101010}.video-frame iframe{width:100%;height:100%;border:0;display:block}.media-controls{display:flex;gap:14px;align-items:center;justify-content:center;margin:12px 0}.media-controls[hidden]{display:none!important}.media-controls button{background:var(--card);border:1px solid var(--border);color:var(--ink);padding:8px 17px;border-radius:20px;cursor:pointer;font:inherit;font-weight:800}.media-controls button:hover{border-color:var(--accent)}.media-counter{color:var(--muted);font-weight:800;direction:ltr}.photo-display{width:100%;aspect-ratio:16/9;border-radius:14px;background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:hidden}.photo-display img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;cursor:zoom-in}.photo-display{position:relative}.watermark-badge{position:absolute;display:inline-flex;align-items:center;gap:8px;direction:rtl;pointer-events:none;z-index:2;color:#fff;background:rgba(0,0,0,.55);border-radius:10px;padding:6px 12px;font-family:Cairo,sans-serif;font-size:clamp(12px,1.8vw,17px);font-weight:800;line-height:1.5;text-shadow:0 1px 3px rgba(0,0,0,.7);max-width:calc(100% - 24px);box-shadow:0 6px 18px rgba(0,0,0,.22)}.photo-watermark{right:12px;bottom:12px}.zoom-watermark{right:10px;bottom:10px;font-size:clamp(12px,2vw,20px);max-width:calc(100% - 20px)}.wm-text{white-space:nowrap}.wm-icons{display:inline-flex;align-items:center;gap:6px;flex-shrink:0}.wm-icon{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:999px;font-size:13px;font-weight:900;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2)}.wm-icon.call{background:rgba(255,255,255,.18)}.wm-icon.wa{background:#25D366;color:#fff;border-color:rgba(255,255,255,.08)}.photos-section[hidden]{display:none!important}.gallery-heading{margin:35px 0 16px;font-size:1.35rem}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}.gallery img{width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--border);border-radius:13px;background:var(--bg);cursor:zoom-in}.empty{border:2px dashed var(--border);border-radius:12px;padding:25px;text-align:center;color:var(--muted);line-height:1.9}.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:999;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}.overlay.open{display:flex}.zoom-frame{position:relative;display:inline-flex;max-width:95%;max-height:90vh;align-items:center;justify-content:center}.zoom-frame img{display:block;max-width:100%;max-height:90vh;width:auto;height:auto;object-fit:contain}.close{position:absolute;top:12px;left:18px;color:white;background:none;border:0;font-size:34px;cursor:pointer}@media(max-width:650px){.watermark-badge{padding:5px 10px;gap:6px}.wm-text{font-size:clamp(11px,3vw,14px)}.wm-icon{width:21px;height:21px;font-size:12px}}
+@media(max-width:650px){.head{grid-template-columns:1fr}.cover{max-height:300px}.card{padding:17px}}
+.watermark-badge{gap:10px!important;background:linear-gradient(135deg,rgba(17,17,17,.82),rgba(35,35,35,.7))!important;border:1px solid rgba(255,255,255,.14)!important;border-radius:16px!important;padding:8px 12px!important;box-shadow:0 14px 30px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.08)!important;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}.wm-text{font-size:clamp(12px,1.95vw,18px)!important;letter-spacing:.2px;text-shadow:0 2px 6px rgba(0,0,0,.55)!important}.wm-icons{gap:7px!important}.wm-icon{width:auto!important;min-width:0!important;height:28px!important;padding:0 10px!important;border-radius:999px!important;font-size:12px!important;font-weight:900!important;letter-spacing:.1px!important;box-shadow:0 5px 14px rgba(0,0,0,.24)!important;border:none!important}.wm-icon.call{background:linear-gradient(135deg,#f4f4f4,#dedede)!important;color:#111!important}.wm-icon.call::before{content:'☎';margin-left:6px;font-size:12px;font-weight:900}.wm-icon.wa{background:linear-gradient(135deg,#2fd66c,#17b452)!important;color:#fff!important}.wm-icon.wa::before{content:'✆';margin-left:6px;font-size:12px;font-weight:900}@media(max-width:650px){.watermark-badge{padding:6px 9px!important;gap:7px!important;border-radius:13px!important}.wm-text{font-size:clamp(10px,3vw,13px)!important}.wm-icons{gap:5px!important}.wm-icon{height:23px!important;padding:0 8px!important;font-size:10px!important}.wm-icon.call::before,.wm-icon.wa::before{margin-left:4px;font-size:10px}}</style>
+</head>
+<body><main class="wrap"><nav class="nav"><a href="index.html" class="back">→ الرجوع للكتالوج</a><button id="theme" class="theme" type="button">🌙 الوضع المظلم</button></nav><article class="card" id="details"><div class="head"><img id="cover" class="cover" alt="صورة غلاف اللعبة"><div><div class="eyebrow">🎮 تفاصيل لعبة PS4</div><div class="meta-row"><h1 id="name" class="title"></h1><span id="badge" class="detail-badge" hidden></span></div><p id="description" class="desc"></p><a id="contact" class="contact" href="https://wa.me/2001022571269" target="_blank" rel="noopener">💬 استفسر عن اللعبة واتساب</a></div></div><section class="video-section" id="videoSection" hidden><h2 class="gallery-heading">▶️ فيديو اللعبة</h2><div class="video-frame" id="videoFrame"></div><div id="videoControls" class="media-controls" hidden><button type="button" id="videoPrev" aria-label="الفيديو السابق">❯ السابق</button><span id="videoCounter" class="media-counter"></span><button type="button" id="videoNext" aria-label="الفيديو التالي">التالي ❮</button></div></section><section class="photos-section" id="photosSection" hidden><h2 class="gallery-heading">📸 صور من داخل اللعبة</h2><div class="photo-display" id="photoDisplay"><img id="activePhoto" alt="صورة من داخل اللعبة"><span class="watermark-badge photo-watermark"><span class="wm-text">بطرس - 01022571269</span><span class="wm-icons" aria-hidden="true"><span class="wm-icon call">اتصال</span><span class="wm-icon wa">واتساب</span></span></span></div><div class="media-controls" id="photoControls" hidden><button type="button" id="photoPrev" aria-label="الصورة السابقة">❯ السابق</button><span id="photoCounter" class="media-counter"></span><button type="button" id="photoNext" aria-label="الصورة التالية">التالي ❮</button></div></section></article></main><div id="overlay" class="overlay" role="dialog" aria-label="تكبير صورة اللعبة"><button id="close" class="close" aria-label="إغلاق">×</button><div class="zoom-frame"><img id="zoomed" alt="صورة مكبرة"><span class="watermark-badge zoom-watermark"><span class="wm-text">بطرس - 01022571269</span><span class="wm-icons" aria-hidden="true"><span class="wm-icon call">اتصال</span><span class="wm-icon wa">واتساب</span></span></span></div></div>
+<script src="games-data.js"></script><script>
+function getYouTubeId(raw){try{const u=new URL(raw);let id='';if(u.hostname==='youtu.be'||u.hostname==='www.youtu.be')id=u.pathname.split('/')[1];else if(['youtube.com','www.youtube.com','m.youtube.com','music.youtube.com','www.youtube-nocookie.com'].includes(u.hostname)){const parts=u.pathname.split('/').filter(Boolean);id=parts[0]==='watch'?u.searchParams.get('v'):(['shorts','embed','live'].includes(parts[0])?parts[1]:'')}return /^[A-Za-z0-9_-]{11}$/.test(id||'')?id:null}catch(e){return null}}
+const id=Number(new URLSearchParams(location.search).get('id'));
+const game=GAMES.find(g=>g.id===id);
+if(!game){document.getElementById('details').innerHTML='<h1>اللعبة غير موجودة</h1><p>ارجع للكتالوج واختار لعبة تانية.</p>';}else{
+ document.title=game.title+' | كتالوج PS4';
+ document.getElementById('cover').src=game.cover;
+ document.getElementById('cover').alt=game.title;
+ document.getElementById('name').textContent=game.title;
+ document.getElementById('description').textContent=game.description;
+ if(game.badge){const badge=document.getElementById('badge'); badge.hidden=false; badge.textContent=game.badge;} 
+ document.getElementById('contact').href='https://wa.me/2001022571269?text='+encodeURIComponent('عايز أستفسر عن لعبة '+game.title);
+ const videos=(Array.isArray(game.videos)?game.videos:(game.youtube?[game.youtube]:[])).map(getYouTubeId).filter(Boolean);
+ if(videos.length){
+   document.getElementById('videoSection').hidden=false;
+   const controls=document.getElementById('videoControls'); controls.hidden=videos.length<=1;
+   let videoIndex=0;
+   function showVideo(index){
+     videoIndex=(index+videos.length)%videos.length;
+     const frame=document.createElement('iframe');
+     frame.src='https://www.youtube-nocookie.com/embed/'+videos[videoIndex];
+     frame.title='فيديو '+(videoIndex+1)+' من لعبة '+game.title;
+     frame.loading='lazy'; frame.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+     frame.allowFullscreen=true;
+     // Replacing the iframe stops playback of the previous video.
+     document.getElementById('videoFrame').replaceChildren(frame);
+     document.getElementById('videoCounter').textContent=(videoIndex+1)+' / '+videos.length;
+   }
+   document.getElementById('videoPrev').onclick=()=>showVideo(videoIndex-1);
+   document.getElementById('videoNext').onclick=()=>showVideo(videoIndex+1);
+   showVideo(0);
+ }
+ const images=Array.isArray(game.images)?game.images.filter(Boolean):[];
+ if(images.length){
+   document.getElementById('photosSection').hidden=false;
+   document.getElementById('photoControls').hidden=images.length<=1;
+   let imageIndex=0;
+   function showPhoto(index){imageIndex=(index+images.length)%images.length;
+     document.getElementById('activePhoto').src=images[imageIndex];
+     document.getElementById('activePhoto').alt='صورة '+(imageIndex+1)+' من '+game.title;
+     document.getElementById('photoCounter').textContent=(imageIndex+1)+' / '+images.length;
+   }
+   document.getElementById('photoPrev').onclick=()=>showPhoto(imageIndex-1);
+   document.getElementById('photoNext').onclick=()=>showPhoto(imageIndex+1);
+   document.getElementById('activePhoto').onclick=()=>{document.getElementById('zoomed').src=images[imageIndex];document.getElementById('overlay').classList.add('open')};
+   showPhoto(0);
+ }
+}
+const theme=document.getElementById('theme');function setTheme(dark){document.body.dataset.theme=dark?'dark':'light';theme.textContent=dark?'☀️ الوضع الفاتح':'🌙 الوضع المظلم';localStorage.setItem('ps4-theme',dark?'dark':'light')}
+setTheme(localStorage.getItem('ps4-theme')==='dark');theme.onclick=()=>setTheme(document.body.dataset.theme!=='dark');
+function closeZoom(){document.getElementById('overlay').classList.remove('open')}
+document.getElementById('close').onclick=closeZoom;document.getElementById('overlay').addEventListener('click',closeZoom);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeZoom()});
+</script></body></html>
