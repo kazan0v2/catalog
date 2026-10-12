@@ -63,7 +63,8 @@ if(!game){document.getElementById('details').innerHTML='<h1>اللعبة غير 
  }
 }
 const theme=document.getElementById('theme');function setTheme(dark){document.body.dataset.theme=dark?'dark':'light';theme.textContent=dark?'☀️ الوضع الفاتح':'🌙 الوضع المظلم';localStorage.setItem('ps4-theme',dark?'dark':'light')}
-setTheme(localStorage.getItem('ps4-theme')==='dark');theme.onclick=()=>setTheme(document.body.dataset.theme!=='dark');
+setTheme(localStorage.getItem('ps4-theme')!=='light');theme.onclick=()=>setTheme(document.body.dataset.theme!=='dark');
 function closeZoom(){document.getElementById('overlay').classList.remove('open')}
 document.getElementById('close').onclick=closeZoom;document.getElementById('overlay').addEventListener('click',closeZoom);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeZoom()});
-</script></body></html>
+</script><script src="music-player.js"></script>
+</body></html>
