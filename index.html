@@ -142,6 +142,39 @@
 .ps4-info{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}
 .ps4-info span{padding:7px 10px;border-radius:12px;background:var(--input-bg);border:1px solid var(--input-border);font-size:.85rem;font-weight:700}
 body.ps4-detail-open .ps4-extra-panel{display:none!important}
+
+/* Side library: only the two existing saved/recent sections are relocated. */
+.ps4-library-launch{position:fixed;right:0;top:48%;transform:translateY(-50%);z-index:1200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;border:1px solid #ffffff2c;border-right:0;border-radius:16px 0 0 16px;padding:11px 9px;background:linear-gradient(160deg,#26282d,#141517);color:#fff;cursor:pointer;box-shadow:-5px 9px 22px #0005;font-family:Cairo,sans-serif}
+.ps4-library-launch>span:first-child{font:700 29px Arial,sans-serif;line-height:1;color:#ff557c}
+.ps4-library-launch-caption{font-size:10px;font-weight:800}
+.ps4-library-shade{position:fixed;inset:0;z-index:2001;background:rgba(0,0,0,.67);backdrop-filter:blur(3px)}
+.ps4-library-shade[hidden]{display:none!important}
+.ps4-library-drawer{position:fixed;top:0;right:0;bottom:0;width:min(390px,92vw);z-index:2002;background:#181a1f;color:#f4f6fa;box-shadow:-18px 0 48px rgba(0,0,0,.4);transform:translateX(104%);visibility:hidden;transition:transform .25s ease,visibility .25s;display:flex;flex-direction:column;direction:rtl;font-family:Cairo,sans-serif;border-left:1px solid #ffffff17}
+.ps4-library-drawer.open{transform:translateX(0);visibility:visible}
+.ps4-library-top{display:flex;align-items:start;justify-content:space-between;gap:15px;padding:29px 22px 18px}
+.ps4-library-eyebrow{color:#00d5bf;font-size:12px;font-weight:800}
+.ps4-library-top h2{font-size:20px;margin:4px 0 0;color:#fff;font-weight:900}
+.ps4-library-close{border:1px solid #ffffff30;background:#26282c;color:#fff;font-size:29px;line-height:1;cursor:pointer;border-radius:12px;width:38px;height:38px}
+.ps4-library-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0 18px 18px;background:#24262b;padding:5px;border-radius:14px}
+.ps4-library-tab{border:0;color:#bfc4cc;background:transparent;border-radius:10px;padding:10px 3px;cursor:pointer;font:800 13px Cairo,sans-serif}
+.ps4-library-tab.active{background:#343943;color:white;box-shadow:0 3px 8px #0002}
+.ps4-library-body{flex:1;overflow-y:auto;padding:0 18px 28px}
+.ps4-library-drawer .ps4-extra-panel{max-width:none;margin:0;padding:0;display:block}
+.ps4-library-drawer .ps4-extra-panel[hidden]{display:none!important}
+.ps4-library-drawer .ps4-extra-inner{background:transparent;border:0;border-radius:0;padding:0}
+.ps4-library-drawer .ps4-mini-list{display:flex;flex-direction:column;gap:10px;align-items:stretch}
+.ps4-library-drawer .ps4-mini-game{display:flex;min-width:0;gap:13px;width:100%;text-align:right;align-items:center;border:1px solid #ffffff19;border-radius:14px;background:#25272d;padding:10px;color:#f6f6f7;transition:border-color .2s ease,background-color .2s ease;font:800 13px Cairo,sans-serif}
+.ps4-library-drawer .ps4-mini-game:hover{background:#30333a;border-color:#00cbbf77}
+.ps4-library-drawer .ps4-mini-game img{height:68px;width:52px;flex-shrink:0;object-fit:contain;background:#1b1c20;border-radius:8px}
+.ps4-library-drawer .ps4-mini-game span{min-width:0;line-height:1.6;overflow-wrap:anywhere}
+.ps4-library-drawer .ps4-order{width:100%;padding:13px;margin-top:10px;border-radius:13px;font:900 14px Cairo,sans-serif}
+.ps4-library-empty{text-align:center;padding:65px 12px;color:#e7eaf0}
+.ps4-library-empty>span{font-size:56px;line-height:1;color:#ff557c}
+.ps4-library-empty p{font-size:17px;font-weight:900;margin:14px 0 3px}
+.ps4-library-empty small{font-size:12px;color:#9fa5b0}
+body.ps4-detail-open .ps4-library-launch{display:none!important}
+body.ps4-detail-open .ps4-library-drawer,body.ps4-detail-open .ps4-library-shade{display:none!important}
+@media(max-width:650px){.ps4-library-launch{top:42%;padding:9px 7px}.ps4-library-drawer{width:min(355px,94vw)}.ps4-library-top{padding-top:24px}}
     </style>
 <style>
 /* Detail screen is inside this document. No iframe or second toolbar. */
@@ -209,8 +242,18 @@ body.ps4-detail-open #ps4InlineDetails{display:block}
         </div>
     </div>
 
-    <section class="ps4-extra-panel" id="ps4Favorites" hidden><div class="ps4-extra-inner"><h2 class="ps4-extra-head">❤️ ألعابي المفضلة</h2><div class="ps4-mini-list" id="ps4FavoritesList"></div></div></section>
-    <section class="ps4-extra-panel" id="ps4Recently" hidden><div class="ps4-extra-inner"><h2 class="ps4-extra-head">🕒 آخر ألعاب شوفتها</h2><div class="ps4-mini-list" id="ps4RecentlyList"></div></div></section>
+    <!-- Compact side drawer for saved and recently viewed games. -->
+    <button class="ps4-library-launch" id="ps4LibraryLaunch" type="button" aria-controls="ps4LibraryDrawer" aria-expanded="false" aria-label="افتح المفضلة وآخر الألعاب"><span aria-hidden="true">♡</span><span class="ps4-library-launch-caption">قائمتي</span></button>
+    <div class="ps4-library-shade" id="ps4LibraryShade" hidden></div>
+    <aside class="ps4-library-drawer" id="ps4LibraryDrawer" role="dialog" aria-modal="true" aria-label="المفضلة وآخر الألعاب" aria-hidden="true" inert>
+      <div class="ps4-library-top"><div><span class="ps4-library-eyebrow">مكتبتك الشخصية</span><h2>ألعابك في مكان واحد</h2></div><button type="button" class="ps4-library-close" id="ps4LibraryClose" aria-label="إغلاق">×</button></div>
+      <div class="ps4-library-tabs" role="tablist" aria-label="أقسام القائمة"><button type="button" class="ps4-library-tab active" data-tab="favorites" role="tab" aria-selected="true">♡ المفضلة</button><button type="button" class="ps4-library-tab" data-tab="recent" role="tab" aria-selected="false">◷ شوفتها مؤخرًا</button></div>
+      <div class="ps4-library-body">
+        <section class="ps4-extra-panel" id="ps4Favorites"><div class="ps4-extra-inner"><div class="ps4-mini-list" id="ps4FavoritesList"></div></div></section>
+        <section class="ps4-extra-panel" id="ps4Recently" hidden><div class="ps4-extra-inner"><div class="ps4-mini-list" id="ps4RecentlyList"></div></div></section>
+        <div class="ps4-library-empty" id="ps4LibraryEmpty" hidden><span aria-hidden="true">♡</span><p>لسه مفيش ألعاب هنا</p><small>اختار الألعاب اللي تعجبك وهتلاقيها هنا بسهولة</small></div>
+      </div>
+    </aside>
     <main class="catalog-grid" id="catalogGrid">
         <!-- 27 لعبة -->
         <!-- تُنشأ بطاقات الألعاب تلقائياً من games-data.js -->
@@ -488,6 +531,44 @@ body.ps4-detail-open #ps4InlineDetails{display:block}
  window.ps4MarkRecently=id=>{id=String(id);recent=[id,...recent.filter(x=>x!==id)].slice(0,4);save(recentKey,recent);render()};
  render();
 })();
+
+/* Drawer only: game lists and persistence remain owned by the existing functions. */
+(()=>{
+ const drawer=document.getElementById('ps4LibraryDrawer');
+ const launch=document.getElementById('ps4LibraryLaunch');
+ const shade=document.getElementById('ps4LibraryShade');
+ const closeBtn=document.getElementById('ps4LibraryClose');
+ const empty=document.getElementById('ps4LibraryEmpty');
+ const tabs=[...drawer.querySelectorAll('.ps4-library-tab')];
+ let tab='favorites';
+ function refresh(){
+  const favorites=document.getElementById('ps4Favorites');
+  const recent=document.getElementById('ps4Recently');
+  const box=tab==='favorites'?favorites:recent;
+  // Favorites render() marks empty sections hidden. Recent follows the same rule.
+  favorites.hidden=tab!=='favorites'||!favorites.querySelector('.ps4-mini-game');
+  recent.hidden=tab!=='recent'||!recent.querySelector('.ps4-mini-game');
+  empty.hidden=!box.hidden;
+  tabs.forEach(b=>{let selected=b.dataset.tab===tab;b.classList.toggle('active',selected);b.setAttribute('aria-selected',String(selected))});
+ }
+ const observer=new MutationObserver(()=>refresh());
+ observer.observe(document.getElementById('ps4FavoritesList'),{childList:true});
+ observer.observe(document.getElementById('ps4RecentlyList'),{childList:true});
+ function setOpen(open){
+  drawer.classList.toggle('open',open);drawer.setAttribute('aria-hidden',String(!open));
+  if(open)drawer.removeAttribute('inert');else drawer.setAttribute('inert','');
+  shade.hidden=!open;launch.setAttribute('aria-expanded',String(open));
+  if(open){refresh();closeBtn.focus()}else launch.focus();
+ }
+ launch.addEventListener('click',()=>setOpen(!drawer.classList.contains('open')));
+ closeBtn.addEventListener('click',()=>setOpen(false));
+ shade.addEventListener('click',()=>setOpen(false));
+ tabs.forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;refresh()}));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&drawer.classList.contains('open')){setOpen(false)}});
+ drawer.addEventListener('click',e=>{if(e.target.closest('a.ps4-mini-game'))setOpen(false)});
+ refresh();
+})();
+
 /* In-document detail navigation: audio and toolbar stay mounted once. */
 (()=>{
  const root=document.createElement('main');root.id='ps4InlineDetails';document.body.appendChild(root);
