@@ -18,7 +18,15 @@ const GAMES = [
       "https://j.top4top.io/p_3937bukel2.jpg",
       "https://k.top4top.io/p_3937sgh1f3.jpg",
       "https://l.top4top.io/p_3937tw0ri4.jpg"
-    ]
+    ],
+    "highlights": [
+      "جديدة",
+      "مميزة"
+    ],
+    "genre": "أكشن – مغامرات – عالم مفتوح – ساموراي",
+    "players": "1",
+    "size": "49GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 2,
@@ -36,7 +44,15 @@ const GAMES = [
       "https://k.top4top.io/p_3937xgqrz5.jpg",
       "https://l.top4top.io/p_3937thbxu6.jpg",
       "https://a.top4top.io/p_3937cwzig7.jpg"
-    ]
+    ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
+    "genre": "مغامرات – ألغاز – تعاونية لشخصين",
+    "players": "2",
+    "size": "32GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 3,
@@ -49,7 +65,14 @@ const GAMES = [
     "images": [
       "https://h.top4top.io/p_3937zx1ik1.jpg",
       "https://i.top4top.io/p_3937ei82d2.jpg"
-    ]
+    ],
+    "highlights": [
+      "مميزة"
+    ],
+    "genre": "سباقات – سيارات – عالم مفتوح",
+    "players": "1",
+    "size": "13GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 4,
@@ -62,7 +85,15 @@ const GAMES = [
     "images": [
       "https://h.top4top.io/p_39378n5ac1.jpg",
       "https://i.top4top.io/p_3937op7zr2.jpg"
-    ]
+    ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
+    "genre": "سباقات – دراجات نارية – قتال",
+    "players": "1-4",
+    "size": "6GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 5,
@@ -75,7 +106,15 @@ const GAMES = [
     "images": [
       "https://e.top4top.io/p_3937tn5lr1.jpg",
       "https://f.top4top.io/p_39376l4482.jpg"
-    ]
+    ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
+    "genre": "رياضة – سيارات – كرة قدم – جماعية",
+    "players": "1-4",
+    "size": "32GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 6,
@@ -88,7 +127,14 @@ const GAMES = [
     "images": [
       "https://a.top4top.io/p_39376dyuo1.jpg",
       "https://b.top4top.io/p_39376b2b22.jpg"
-    ]
+    ],
+    "highlights": [
+      "مميزة"
+    ],
+    "genre": "مغامرات – استكشاف – ألغاز",
+    "players": "1",
+    "size": "7GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 7,
@@ -101,7 +147,14 @@ const GAMES = [
     "images": [
       "https://k.top4top.io/p_3937osv3q1.jpg",
       "https://l.top4top.io/p_3937h9eaz2.jpg"
-    ]
+    ],
+    "highlights": [
+      "مميزة"
+    ],
+    "genre": "أكشن – مغامرات – استكشاف – قصة",
+    "players": "1",
+    "size": "45GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 8,
@@ -114,7 +167,14 @@ const GAMES = [
     "images": [
       "https://e.top4top.io/p_3937kqcbx1.jpg",
       "https://f.top4top.io/p_3937t50kj2.png"
-    ]
+    ],
+    "highlights": [
+      "مميزة"
+    ],
+    "genre": "أكشن – تصويب – زومبي – تعاونية",
+    "players": "1",
+    "size": "45GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 9,
@@ -128,7 +188,14 @@ const GAMES = [
     "images": [
       "https://e.top4top.io/p_3937bl0y81.jpg",
       "https://f.top4top.io/p_3937hq7h32.jpg"
-    ]
+    ],
+    "highlights": [
+      "مناسبة لشخصين"
+    ],
+    "genre": "مصارعة – رياضة – قتال",
+    "players": "1-4",
+    "size": "50GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 10,
@@ -142,7 +209,15 @@ const GAMES = [
     "images": [
       "https://g.top4top.io/p_3937wk0qa1.jpg",
       "https://h.top4top.io/p_3937ztjri2.jpg"
-    ]
+    ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
+    "genre": "كرة قدم – رياضة",
+    "players": "1-4",
+    "size": "28GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 11,
@@ -153,7 +228,14 @@ const GAMES = [
     "videos": [
       "https://youtu.be/q565g_CVfhw?si=3OiAm-Ny_TCIlMNC&t=15"
     ],
-    "images": []
+    "images": [],
+    "highlights": [
+      "الأكثر طلبًا"
+    ],
+    "genre": "كرة قدم – رياضة",
+    "players": "1-4",
+    "size": "77GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 12,
@@ -164,7 +246,15 @@ const GAMES = [
     "videos": [
       "https://youtu.be/Nn3VVL3kKI4?si=n6StcqQM9o-cC8A3&t=16"
     ],
-    "images": []
+    "images": [],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
+    "genre": "كرة قدم – رياضة",
+    "players": "1-4",
+    "size": "51GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 13,
@@ -178,7 +268,14 @@ const GAMES = [
     "images": [
       "https://e.top4top.io/p_3937l4mqf1.jpg",
       "https://f.top4top.io/p_39372huyr2.jpg"
-    ]
+    ],
+    "highlights": [
+      "مناسبة لشخصين"
+    ],
+    "genre": "قتال – فنون قتالية",
+    "players": "1-2",
+    "size": "60GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 14,
@@ -197,7 +294,14 @@ const GAMES = [
       "https://d.top4top.io/p_39377hq1s8.jpg",
       "https://b.top4top.io/p_3937xkj2j6.jpg",
       "https://c.top4top.io/p_393730pd17.jpg"
-    ]
+    ],
+    "highlights": [
+      "الأكثر طلبًا"
+    ],
+    "genre": "أكشن – عالم مفتوح – سيارات – جريمة",
+    "players": "1",
+    "size": "42GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 15,
@@ -213,7 +317,14 @@ const GAMES = [
       "https://j.top4top.io/p_3937ik1zg3.jpg",
       "https://i.top4top.io/p_393739dm22.jpg",
       "https://h.top4top.io/p_3937pqfl81.jpg"
-    ]
+    ],
+    "highlights": [
+      "الأكثر طلبًا"
+    ],
+    "genre": "أكشن – مغامرات – عالم مفتوح – أبطال خارقون",
+    "players": "1",
+    "size": "39GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 16,
@@ -229,7 +340,15 @@ const GAMES = [
       "https://f.top4top.io/p_3937bjtlo2.jpg",
       "https://e.top4top.io/p_3937nix081.jpg",
       "https://k.top4top.io/p_3937a36o36.jpg"
-    ]
+    ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
+    "genre": "كرة قدم – رياضة",
+    "players": "1-4",
+    "size": "75GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 17,
@@ -243,7 +362,15 @@ const GAMES = [
     "images": [
       "https://b.top4top.io/p_39379pkkm1.jpg",
       "https://c.top4top.io/p_393790rt42.jpg"
-    ]
+    ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
+    "genre": "كرة قدم – رياضة",
+    "players": "1-4",
+    "size": "64GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 18,
@@ -261,7 +388,15 @@ const GAMES = [
       "https://l.top4top.io/p_3937ar6zj4.jpg",
       "https://a.top4top.io/p_3937afc2z5.jpg",
       "https://b.top4top.io/p_39370h8cv6.jpg"
-    ]
+    ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
+    "genre": "منصات – مغامرات – تحديات",
+    "players": "1-4",
+    "size": "14GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 19,
@@ -274,7 +409,15 @@ const GAMES = [
     "images": [
       "https://j.top4top.io/p_3937ii9c71.jpg",
       "https://k.top4top.io/p_3937seuxx2.jpg"
-    ]
+    ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
+    "genre": "تصويب – أكشن – حرب – زومبي",
+    "players": "1-4",
+    "size": "42GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 20,
@@ -292,7 +435,14 @@ const GAMES = [
       "https://k.top4top.io/p_3937000mi5.jpg",
       "https://a.top4top.io/p_3937a0dzr7.jpg",
       "https://b.top4top.io/p_3937qlu2p8.jpg"
-    ]
+    ],
+    "highlights": [
+      "مناسبة لشخصين"
+    ],
+    "genre": "تصويب – أكشن – جماعية – زومبي",
+    "players": "1-4",
+    "size": "88GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 21,
@@ -309,7 +459,15 @@ const GAMES = [
       "https://c.top4top.io/p_3937268to4.jpg",
       "https://d.top4top.io/p_3937pss575.jpg",
       "https://e.top4top.io/p_3937ph6te6.jpg"
-    ]
+    ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
+    "genre": "قتال – فنون قتالية",
+    "players": "1-2",
+    "size": "42GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 22,
@@ -322,12 +480,20 @@ const GAMES = [
     "images": [
       "https://d.top4top.io/p_39373vtfv1.jpg",
       "https://e.top4top.io/p_3937d1vai2.jpg"
-    ]
+    ],
+    "highlights": [
+      "مناسبة لشخصين"
+    ],
+    "genre": "قتال – أنمي – أكشن",
+    "players": "1-2",
+    "size": "32GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 23,
     "title": "car mechanic simulator",
     "cover": "https://d.top4top.io/p_3938afmbk7.jpg",
+    "badge": "مترجمة",
     "description": "لو بتحب العربيات والميكانيكا، اللعبة دي هتخليك تدير ورشتك بنفسك. استقبل العربيات، واكتشف الأعطال، وفكّ وركّب قطع الغيار، وصلّح المحركات، وطوّر ورشتك مع كل شغلانة جديدة في تجربة محاكاة مليانة تفاصيل.",
     "videos": [
       "https://youtu.be/LCTF8wKWFSU?si=9f6LUsxrBp4ZBQUi"
@@ -335,7 +501,11 @@ const GAMES = [
     "images": [
       "https://f.top4top.io/p_3937l82ha1.jpg",
       "https://g.top4top.io/p_39377spmk2.jpg"
-    ]
+    ],
+    "genre": "محاكاة – سيارات – ميكانيكا",
+    "players": "1",
+    "size": "9GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 24,
@@ -351,7 +521,11 @@ const GAMES = [
       "https://j.top4top.io/p_3937301zu3.jpg",
       "https://k.top4top.io/p_3937aj3l34.jpg",
       "https://l.top4top.io/p_3937xox9b5.jpg"
-    ]
+    ],
+    "genre": "أكشن – بقاء – زومبي – عالم مفتوح",
+    "players": "1",
+    "size": "36GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 25,
@@ -364,7 +538,14 @@ const GAMES = [
     "images": [
       "https://g.top4top.io/p_3937dlnm91.jpg",
       "https://h.top4top.io/p_39372hw9j2.jpg"
-    ]
+    ],
+    "highlights": [
+      "مميزة"
+    ],
+    "genre": "أكشن – مغامرات – عالم مفتوح – غرب أمريكي",
+    "players": "1",
+    "size": "10GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 26,
@@ -377,7 +558,14 @@ const GAMES = [
     "images": [
       "https://c.top4top.io/p_3937ciysp1.jpg",
       "https://d.top4top.io/p_3937v4prh2.jpg"
-    ]
+    ],
+    "highlights": [
+      "مميزة"
+    ],
+    "genre": "أكشن – مغامرات – عالم مفتوح – غرب أمريكي",
+    "players": "1",
+    "size": "80GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 27,
@@ -390,7 +578,11 @@ const GAMES = [
     "images": [
       "https://a.top4top.io/p_3937f62yn1.jpg",
       "https://b.top4top.io/p_3937oslc22.jpg"
-    ]
+    ],
+    "genre": "مغامرات – منصات – عائلية",
+    "players": "1",
+    "size": "1GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 28,
@@ -403,7 +595,11 @@ const GAMES = [
     "images": [
       "https://g.top4top.io/p_3937cttzi1.jpg",
       "https://h.top4top.io/p_393733ojx2.jpg"
-    ]
+    ],
+    "genre": "كوميديا – ألغاز – تخطيط",
+    "players": "1",
+    "size": "2GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 29,
@@ -416,7 +612,14 @@ const GAMES = [
     "images": [
       "https://h.top4top.io/p_3937hhd8f1.jpg",
       "https://i.top4top.io/p_39373hirq2.jpg"
-    ]
+    ],
+    "highlights": [
+      "مميزة"
+    ],
+    "genre": "أكشن – مغامرات – عالم مفتوح – قراصنة",
+    "players": "1",
+    "size": "7GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 30,
@@ -431,7 +634,14 @@ const GAMES = [
       "https://b.top4top.io/p_3937h4c5u1.jpg",
       "https://c.top4top.io/p_3937syr952.jpg",
       "https://d.top4top.io/p_3937oi39c3.jpg"
-    ]
+    ],
+    "highlights": [
+      "مميزة"
+    ],
+    "genre": "أكشن – مغامرات – تسلل – تاريخي",
+    "players": "1",
+    "size": "40GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 31,
@@ -444,7 +654,14 @@ const GAMES = [
     "images": [
       "https://l.top4top.io/p_3937jvec91.jpg",
       "https://a.top4top.io/p_3937bz0e82.jpg"
-    ]
+    ],
+    "highlights": [
+      "مميزة"
+    ],
+    "genre": "أكشن – مغامرات – عالم مفتوح – تاريخي",
+    "players": "1",
+    "size": "40GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 32,
@@ -458,7 +675,14 @@ const GAMES = [
     "images": [
       "https://i.top4top.io/p_3937zlooo1.jpg",
       "https://j.top4top.io/p_3937y04j12.jpg"
-    ]
+    ],
+    "highlights": [
+      "مناسبة لشخصين"
+    ],
+    "genre": "أكشن – مغامرات – تعاونية لشخصين – قصة",
+    "players": "2",
+    "size": "15GB",
+    "online": "بدون انترنت"
   },
   {
     "id": 33,
@@ -471,6 +695,13 @@ const GAMES = [
     "images": [
       "https://c.top4top.io/p_3937r972b1.jpg",
       "https://d.top4top.io/p_3937dq1s32.jpg"
-    ]
+    ],
+    "highlights": [
+      "مميزة"
+    ],
+    "genre": "باتل رويال – تصويب – بقاء – أونلاين",
+    "players": "1-4",
+    "size": "17GB",
+    "online": "تحتاج نت"
   }
 ];

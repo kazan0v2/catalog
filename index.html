@@ -127,6 +127,21 @@
         .no-results { text-align: center; grid-column: 1 / -1; padding: 40px; font-size: 1.2rem; color: #888; display: none; }
 
 /* Keep catalog music and its original toolbar alive during detail navigation. */
+/* Feature extensions only; existing catalog styles are unchanged */
+.ps4-extra-panel{max-width:1200px;margin:0 auto 24px;padding:0 20px}
+.ps4-extra-panel[hidden]{display:none!important}
+.ps4-extra-inner{background:var(--card-bg);border:1px solid var(--input-border);border-radius:16px;padding:15px 18px}
+.ps4-extra-head{font-size:1.12rem;margin:0 0 10px;font-weight:900}
+.ps4-mini-list{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.ps4-mini-game{display:inline-flex;gap:8px;align-items:center;padding:7px 10px;border-radius:12px;background:var(--input-bg);border:1px solid var(--input-border);color:var(--text-color);text-decoration:none;font:700 .84rem Cairo,sans-serif;cursor:pointer}
+.ps4-mini-game img{height:38px;width:30px;object-fit:contain}
+.ps4-order{background:#25d366;color:#fff;border:0;border-radius:20px;font:800 .88rem Cairo,sans-serif;padding:9px 16px;cursor:pointer}
+.ps4-fav-btn{position:absolute;left:12px;top:12px;z-index:4;border:1px solid #ffffff77;background:rgba(0,0,0,.72);color:white;border-radius:50%;width:36px;height:36px;font-size:23px;cursor:pointer;display:grid;place-items:center}
+.ps4-fav-btn.active{color:#ff4b79;background:#fff}.ps4-fav-btn svg{display:block;width:22px;height:22px}.ps4-fav-btn.active svg path{fill:currentColor}
+.ps4-mark-extra{position:absolute;right:10px;bottom:9px;z-index:3;background:#075fc1;color:#fff;padding:3px 9px;border-radius:99px;font:800 .7rem Cairo,sans-serif}
+.ps4-info{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}
+.ps4-info span{padding:7px 10px;border-radius:12px;background:var(--input-bg);border:1px solid var(--input-border);font-size:.85rem;font-weight:700}
+body.ps4-detail-open .ps4-extra-panel{display:none!important}
     </style>
 <style>
 /* Detail screen is inside this document. No iframe or second toolbar. */
@@ -194,6 +209,8 @@ body.ps4-detail-open #ps4InlineDetails{display:block}
         </div>
     </div>
 
+    <section class="ps4-extra-panel" id="ps4Favorites" hidden><div class="ps4-extra-inner"><h2 class="ps4-extra-head">❤️ ألعابي المفضلة</h2><div class="ps4-mini-list" id="ps4FavoritesList"></div></div></section>
+    <section class="ps4-extra-panel" id="ps4Recently" hidden><div class="ps4-extra-inner"><h2 class="ps4-extra-head">🕒 آخر ألعاب شوفتها</h2><div class="ps4-mini-list" id="ps4RecentlyList"></div></div></section>
     <main class="catalog-grid" id="catalogGrid">
         <!-- 27 لعبة -->
         <!-- تُنشأ بطاقات الألعاب تلقائياً من games-data.js -->
@@ -363,6 +380,8 @@ body.ps4-detail-open #ps4InlineDetails{display:block}
             picture.loading = 'lazy';
             link.appendChild(picture);
             wrapper.appendChild(link);
+            const heart=document.createElement('button');heart.type='button';heart.className='ps4-fav-btn';heart.dataset.favorite=String(game.id);heart.setAttribute('aria-label','إضافة أو إزالة '+game.title+' من المفضلة');heart.innerHTML='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';wrapper.appendChild(heart);
+            if(Array.isArray(game.highlights)&&game.highlights.length){const x=document.createElement('span');x.className='ps4-mark-extra';x.textContent=game.highlights.join(' • ');wrapper.appendChild(x)}
             if (game.badge && game.badge.trim()) {
                 const badge = document.createElement('span');
                 badge.className = 'game-badge';
@@ -450,6 +469,25 @@ body.ps4-detail-open #ps4InlineDetails{display:block}
 
 
 <script>
+/* Favorites and recently viewed: client-side only, no network calls. */
+(()=>{
+ const favKey='ps4-favorites-v1',recentKey='ps4-recent-v1';
+ const load=k=>{try{const a=JSON.parse(localStorage.getItem(k)||'[]');return Array.isArray(a)?a.map(String):[]}catch{return []}};
+ const save=(k,a)=>{try{localStorage.setItem(k,JSON.stringify(a))}catch{}};
+ let fav=load(favKey),recent=load(recentKey);
+ const find=id=>GAMES.find(g=>String(g.id)===String(id));
+ const row=(id)=>{const g=find(id);if(!g)return null;const a=document.createElement('a');a.className='ps4-mini-game game-image-link';a.href='game.html?id='+encodeURIComponent(g.id);const img=document.createElement('img');img.src=g.cover||'';img.loading='lazy';img.alt='';const name=document.createElement('span');name.textContent=g.title;a.append(img,name);return a};
+ function render(){
+  document.querySelectorAll('[data-favorite]').forEach(b=>{const on=fav.includes(b.dataset.favorite);b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on))});
+  const fb=document.getElementById('ps4Favorites'),fl=document.getElementById('ps4FavoritesList');fl.replaceChildren();const ids=fav.filter(id=>find(id));fb.hidden=!ids.length;
+  ids.forEach(id=>{const a=row(id);if(a)fl.appendChild(a)});
+  if(ids.length){const order=document.createElement('button');order.type='button';order.className='ps4-order';order.textContent='اطلب كل الألعاب بواتساب';order.onclick=()=>{const titles=ids.map(find).filter(Boolean).map(g=>'• '+g.title);window.open('https://wa.me/2001022571269?text='+encodeURIComponent('السلام عليكم، عايز أطلب الألعاب دي:\n'+titles.join('\n')),'_blank','noopener')};fl.appendChild(order)}
+  const rb=document.getElementById('ps4Recently'),rl=document.getElementById('ps4RecentlyList');rl.replaceChildren();const shown=recent.filter(id=>find(id)).slice(0,4);rb.hidden=!shown.length;shown.forEach(id=>{const a=row(id);if(a)rl.appendChild(a)});
+ }
+ document.addEventListener('click',e=>{const b=e.target.closest('[data-favorite]');if(!b)return;e.preventDefault();e.stopPropagation();const id=b.dataset.favorite;fav=fav.includes(id)?fav.filter(x=>x!==id):[...fav,id];save(favKey,fav);render()});
+ window.ps4MarkRecently=id=>{id=String(id);recent=[id,...recent.filter(x=>x!==id)].slice(0,4);save(recentKey,recent);render()};
+ render();
+})();
 /* In-document detail navigation: audio and toolbar stay mounted once. */
 (()=>{
  const root=document.createElement('main');root.id='ps4InlineDetails';document.body.appendChild(root);
@@ -464,6 +502,9 @@ body.ps4-detail-open #ps4InlineDetails{display:block}
   const $=sel=>root.querySelector(sel);
   $('.dback').onclick=()=>close(true);$('.dcover').src=g.cover||'';$('.dcover').alt=g.title;$('.dtitle').textContent=g.title;$('.ddesc').textContent=g.description||'';
   if(g.badge){$('.dbadge').hidden=false;$('.dbadge').textContent=g.badge;}
+  const infoFields=[['الشارات',(g.highlights||[]).join(' • ')],['النوع',g.genre],['اللاعبون',g.players],['الحجم التقريبي',g.size],['الإنترنت',g.online]].filter(x=>x[1]);
+  if(infoFields.length){const box=document.createElement('div');box.className='ps4-info';for(const [label,val] of infoFields){const x=document.createElement('span');x.textContent=label+': '+val;box.appendChild(x)}$('.ddesc').after(box)}
+  window.ps4MarkRecently?.(g.id);
   $('.dcontact').href='https://wa.me/2001022571269?text='+encodeURIComponent('عايز أستفسر عن لعبة '+g.title);
   const videos=(Array.isArray(g.videos)?g.videos:(g.youtube?[g.youtube]:[])).map(videoId).filter(Boolean);
   if(videos.length){$('.dvideoSection').hidden=false;$('.dvcontrols').hidden=videos.length<=1;let at=0;
