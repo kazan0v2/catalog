@@ -48,7 +48,12 @@ function attempt(){
 function userGesture(){if(pending&&!userMuted&&!pausedForVideo){try{const p=audio.play();if(p&&p.catch)p.catch(()=>{});}catch(e){}}else attempt();}
 window.__ps4MusicGesture=userGesture;
 window.__ps4PauseForTrailer=()=>{pausedForVideo=true;audio.pause();render();};
-['pointerdown','keydown','touchstart'].forEach(ev=>document.addEventListener(ev,userGesture,{passive:true}));
+// On mobile, a swipe can become a scroll without a click. Try during the
+// touch gesture (when browser user activation may be available), then retry
+// on scroll as a best effort. Browser autoplay policies still apply.
+['pointerdown','keydown','touchstart','touchmove','touchend'].forEach(ev=>document.addEventListener(ev,userGesture,{passive:true}));
+window.addEventListener('scroll',userGesture,{passive:true});
+window.addEventListener('wheel',userGesture,{passive:true});
 btn.addEventListener('pointerdown',e=>e.stopPropagation());btn.addEventListener('touchstart',e=>e.stopPropagation());btn.addEventListener('click',()=>{userMuted=!userMuted;localStorage.setItem(KEY,userMuted?'1':'0');if(userMuted){audio.pause();}else{pausedForVideo=false;attempt();}render();});
 const homeBtn=document.querySelector('.theme-toggle-btn');
 if(homeBtn){homeBtn.insertAdjacentElement('afterend',btn);const bar=homeBtn.parentElement;if(bar){bar.style.gap='10px';bar.style.flexWrap='wrap';}}
