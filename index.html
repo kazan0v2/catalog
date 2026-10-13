@@ -125,7 +125,40 @@
         .whatsapp-float:hover { transform: scale(1.15) rotate(10deg); background-color: #20ba5a; }
         @keyframes pulse-whatsapp { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
         .no-results { text-align: center; grid-column: 1 / -1; padding: 40px; font-size: 1.2rem; color: #888; display: none; }
+
+/* Keep catalog music and its original toolbar alive during detail navigation. */
     </style>
+<style>
+/* Detail screen is inside this document. No iframe or second toolbar. */
+#ps4InlineDetails{display:none;max-width:1040px;margin:0 auto;padding:28px 18px 60px;font-family:Cairo,sans-serif;color:var(--text-color)}
+body.ps4-detail-open .ticker-wrapper,body.ps4-detail-open .catalog-header,body.ps4-detail-open .sub-announcement,body.ps4-detail-open .live-counter,body.ps4-detail-open .controls-container,body.ps4-detail-open .catalog-grid,body.ps4-detail-open .whatsapp-float{display:none!important}
+body.ps4-detail-open #ps4InlineDetails{display:block}
+#ps4InlineDetails .dnav{display:flex;justify-content:space-between;align-items:center;margin:0 0 22px}
+#ps4InlineDetails .dback{border:1px solid var(--input-border);border-radius:24px;background:var(--card-bg);color:var(--text-color);padding:10px 16px;font:700 15px Cairo,sans-serif;cursor:pointer}
+#ps4InlineDetails .dcard{border:1px solid var(--input-border);border-radius:20px;background:var(--card-bg);padding:24px;box-shadow:0 10px 30px var(--shadow-color)}
+#ps4InlineDetails .dhead{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center}
+#ps4InlineDetails .dcover{width:100%;max-height:360px;object-fit:contain;border-radius:12px;padding:12px;background:var(--input-bg)}
+#ps4InlineDetails .dtitle{font-size:clamp(1.45rem,4vw,2.4rem);line-height:1.5;margin:8px 0;overflow-wrap:anywhere}
+#ps4InlineDetails .dmeta{color:#00c9a7;font-weight:900}
+#ps4InlineDetails .dbadge{display:inline-block;background:#e50932;color:#fff;border-radius:99px;padding:6px 13px;font-weight:900} #ps4InlineDetails .dbadge[hidden]{display:none!important}
+#ps4InlineDetails .ddesc{white-space:pre-line;line-height:2;color:var(--text-color);opacity:.8}
+#ps4InlineDetails .dcontact{display:inline-block;background:#25d366;color:#fff;border-radius:24px;padding:10px 20px;text-decoration:none;font-weight:800;margin-top:14px}
+#ps4InlineDetails .dsection{margin-top:34px}
+#ps4InlineDetails .dsection h2{font-size:1.35rem;margin:0 0 14px}
+#ps4InlineDetails .dvideo{width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:14px;background:#111}
+#ps4InlineDetails .dvideo iframe{width:100%;height:100%;border:0}
+#ps4InlineDetails .dphoto{position:relative;width:100%;aspect-ratio:16/9;background:var(--input-bg);border-radius:14px;overflow:hidden;display:flex;justify-content:center;align-items:center}
+#ps4InlineDetails .dphoto img{width:100%;height:100%;object-fit:contain;cursor:zoom-in}
+#ps4InlineDetails .dwm{position:absolute;right:12px;bottom:12px;display:flex;align-items:center;gap:9px;direction:rtl;color:white;background:rgba(15,15,15,.80);border-radius:14px;padding:8px 13px;font-weight:900;pointer-events:none}
+#ps4InlineDetails .dwm .call{background:#eee;color:#111;border-radius:20px;padding:3px 8px;font-size:12px}#ps4InlineDetails .dwm .wa{background:#25d366;border-radius:20px;padding:3px 8px;font-size:12px}
+#ps4InlineDetails .dcontrols{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:12px}
+#ps4InlineDetails .dcontrols button{border:1px solid var(--input-border);border-radius:20px;background:var(--card-bg);color:var(--text-color);font:800 14px Cairo,sans-serif;padding:7px 15px;cursor:pointer}
+#ps4InlineDetails .dzoom{display:none;position:fixed;inset:0;z-index:4000;background:rgba(0,0,0,.95);align-items:center;justify-content:center;padding:25px;cursor:zoom-out}
+#ps4InlineDetails .dzoom.open{display:flex}#ps4InlineDetails .dzoomcontent{position:relative;display:inline-flex;max-width:95%;max-height:90vh}
+#ps4InlineDetails .dzoomcontent img{display:block;max-width:100%;max-height:90vh;object-fit:contain}
+#ps4InlineDetails .dzoomclose{position:absolute;top:12px;left:15px;color:white;background:none;border:0;font-size:36px;cursor:pointer}
+@media(max-width:650px){#ps4InlineDetails .dhead{grid-template-columns:1fr}#ps4InlineDetails .dcard{padding:16px}#ps4InlineDetails .dwm{font-size:11px;gap:5px;padding:5px 8px}}
+</style>
 </head>
 <body data-theme="dark">
 
@@ -414,5 +447,45 @@
         }
     </script>
 <script src="music-player.js"></script>
+
+
+<script>
+/* In-document detail navigation: audio and toolbar stay mounted once. */
+(()=>{
+ const root=document.createElement('main');root.id='ps4InlineDetails';document.body.appendChild(root);
+ let current=null;
+ const videoId=raw=>{try{const u=new URL(raw);let v='';if(u.hostname==='youtu.be'||u.hostname==='www.youtu.be')v=u.pathname.split('/')[1];else if(['youtube.com','www.youtube.com','m.youtube.com','music.youtube.com','www.youtube-nocookie.com'].includes(u.hostname)){const a=u.pathname.split('/').filter(Boolean);v=a[0]==='watch'?u.searchParams.get('v'):(['embed','shorts','live'].includes(a[0])?a[1]:'');}return /^[A-Za-z0-9_-]{11}$/.test(v||'')?v:null;}catch{return null;}};
+ function close(push){current=null;root.replaceChildren();document.body.classList.remove('ps4-detail-open');if(push)history.pushState({page:'catalog'},'','index.html');document.title='كتالوج العاب PS4';window.scrollTo(0,0);}
+ function show(id,push){
+  const g=GAMES.find(x=>String(x.id)===String(id));if(!g){close(push);return;}
+  current=String(id);if(push)history.pushState({page:'game',id:current},'','index.html?game='+encodeURIComponent(current));
+  document.body.classList.add('ps4-detail-open');document.title=g.title+' | كتالوج PS4';
+  root.innerHTML=`<nav class="dnav"><button type="button" class="dback">→ الرجوع للكتالوج</button></nav><article class="dcard"><div class="dhead"><img class="dcover"><div><div class="dmeta">🎮 تفاصيل لعبة PS4</div><h1 class="dtitle"></h1><div class="dbadge" hidden></div><p class="ddesc"></p><a class="dcontact" target="_blank" rel="noopener">💬 استفسر عن اللعبة واتساب</a></div></div><section class="dsection dvideoSection" hidden><h2>▶️ فيديو اللعبة</h2><div class="dvideo"></div><div class="dcontrols dvcontrols" hidden><button type="button" class="dvprev">❯ السابق</button><span class="dvcounter"></span><button type="button" class="dvnext">التالي ❮</button></div></section><section class="dsection dphotosSection" hidden><h2>📸 صور من داخل اللعبة</h2><div class="dphoto"><img class="dactive" alt="صورة من اللعبة"><span class="dwm">بطرس - 01022571269 <span class="call">☎ اتصال</span><span class="wa">واتساب</span></span></div><div class="dcontrols dpcontrols" hidden><button type="button" class="dpprev">❯ السابق</button><span class="dpcounter"></span><button type="button" class="dpnext">التالي ❮</button></div></section></article><div class="dzoom"><button class="dzoomclose" type="button" aria-label="إغلاق">×</button><div class="dzoomcontent"><img class="dzoomimg" alt="صورة مكبرة"><span class="dwm">بطرس - 01022571269 <span class="call">☎ اتصال</span><span class="wa">واتساب</span></span></div></div>`;
+  const $=sel=>root.querySelector(sel);
+  $('.dback').onclick=()=>close(true);$('.dcover').src=g.cover||'';$('.dcover').alt=g.title;$('.dtitle').textContent=g.title;$('.ddesc').textContent=g.description||'';
+  if(g.badge){$('.dbadge').hidden=false;$('.dbadge').textContent=g.badge;}
+  $('.dcontact').href='https://wa.me/2001022571269?text='+encodeURIComponent('عايز أستفسر عن لعبة '+g.title);
+  const videos=(Array.isArray(g.videos)?g.videos:(g.youtube?[g.youtube]:[])).map(videoId).filter(Boolean);
+  if(videos.length){$('.dvideoSection').hidden=false;$('.dvcontrols').hidden=videos.length<=1;let at=0;
+   const render=n=>{at=(n+videos.length)%videos.length;const f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+videos[at];f.title='فيديو اللعبة';f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';f.allowFullscreen=true;f.loading='lazy';$('.dvideo').replaceChildren(f);$('.dvcounter').textContent=(at+1)+' / '+videos.length;};
+   $('.dvprev').onclick=()=>render(at-1);$('.dvnext').onclick=()=>render(at+1);render(0);
+   $('.dvideo').addEventListener('pointerdown',()=>window.__ps4PauseForTrailer?.());$('.dvideo').addEventListener('focusin',()=>window.__ps4PauseForTrailer?.());
+  }
+  const imgs=Array.isArray(g.images)?g.images.filter(Boolean):[];
+  if(imgs.length){$('.dphotosSection').hidden=false;$('.dpcontrols').hidden=imgs.length<=1;let at=0;
+   const render=n=>{at=(n+imgs.length)%imgs.length;$('.dactive').src=imgs[at];$('.dpcounter').textContent=(at+1)+' / '+imgs.length;};
+   $('.dpprev').onclick=()=>render(at-1);$('.dpnext').onclick=()=>render(at+1);
+   $('.dactive').onclick=()=>{$('.dzoomimg').src=imgs[at];$('.dzoom').classList.add('open');};render(0);
+  }
+  $('.dzoom').addEventListener('click',()=>$('.dzoom').classList.remove('open'));
+  $('.dzoomclose').onclick=()=>$('.dzoom').classList.remove('open');
+  window.scrollTo(0,0);
+ }
+ document.addEventListener('click',e=>{const a=e.target.closest('a.game-image-link');if(!a)return;const u=new URL(a.href,location.href);if(u.pathname.split('/').pop()!=='game.html')return;e.preventDefault();show(u.searchParams.get('id'),true);});
+ window.addEventListener('popstate',()=>{const id=new URLSearchParams(location.search).get('game');if(id!==null)show(id,false);else close(false);});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')root.querySelector('.dzoom.open')?.classList.remove('open');});
+ const initial=new URLSearchParams(location.search).get('game');if(initial!==null)show(initial,false);
+})();
+</script>
 </body>
 </html>
