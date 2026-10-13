@@ -3,7 +3,7 @@ const GAMES = [
   {
     "id": 1,
     "title": "Ghost of Tsushima Director's Cut",
-    "cover": "https://c.top4top.io/p_3901pzliu1.jpg",
+    "cover": "https://j.top4top.io/p_3938p8jcr1.jpg",
     "badge": "مترجمة",
     "description": "لعبة مغامرات وعالم مفتوح، بتعيش فيها قصة محارب ساموراي بيدافع عن جزيرته ضد الغزو. فيها قتال بالسيوف واستكشاف وعالم جميل",
     "videos": [
@@ -54,7 +54,7 @@ const GAMES = [
   {
     "id": 4,
     "title": "Road Redemption",
-    "cover": "https://f.top4top.io/p_39011o95b4.jpg",
+    "cover": "https://k.top4top.io/p_39389cbv02.jpg",
     "description": "سباقات موتوسيكلات مليانة أكشن وقتال على الطريق، مش مجرد سباق عادي. هتسابق منافسين شرسين وتستخدم أسلحة مختلفة عشان تتغلب عليهم، وتطوّر شخصيتك وموتوسيكلاتك مع كل تحدي جديد.",
     "videos": [
       "https://youtu.be/ZDquuLDnRv4?si=wEQd1cqwVU7sg810"
@@ -119,7 +119,7 @@ const GAMES = [
   {
     "id": 9,
     "title": "wwe 25",
-    "cover": "https://d.top4top.io/p_3901j84ec1.jpg",
+    "cover": "https://l.top4top.io/p_3938od0pe3.jpg",
     "badge": "مترجمة",
     "description": "ادخل عالم المصارعة الحرة وعيش أجواء WWE مع مجموعة كبيرة من النجوم والمصارعين. نفّذ الضربات والحركات القاضية، ونافس على البطولات، والعب ضد أصحابك في مواجهات مليانة حماس ومتعة داخل الحلبة.",
     "videos": [
@@ -158,7 +158,7 @@ const GAMES = [
   {
     "id": 12,
     "title": "بيس 27",
-    "cover": "https://g.top4top.io/p_390174bxc4.jpg",
+    "cover": "https://a.top4top.io/p_3938jj0094.jpg",
     "badge": "مترجمة",
     "description": "منافسة كروية وحماس مستمر مع نسخة بيس 2027 الموجودة بالكتالوج. اختار فريقك المفضل، وجهّز خطتك، وادخل تحديات ومباريات ضد أصحابك عشان تثبت مين الأفضل في الملعب.",
     "videos": [
@@ -183,7 +183,7 @@ const GAMES = [
   {
     "id": 14,
     "title": "جاتا",
-    "cover": "https://j.top4top.io/p_3901zm4pr2.jpg",
+    "cover": "https://b.top4top.io/p_3938he6qz5.jpg",
     "description": "ادخل عالم مفتوح ضخم مليان مغامرات ومهمات ومطاردات بالعربيات. عيش قصص ثلاث شخصيات مختلفة، واستكشف مدينة لوس سانتوس، وجرّب القيادة والأكشن والأنشطة المتنوعة في واحدة من أشهر ألعاب العالم المفتوح.",
     "videos": [
       "https://youtu.be/hBvMSP7cI-Q?si=KzBChjP0p1IH38NZ"
@@ -202,7 +202,7 @@ const GAMES = [
   {
     "id": 15,
     "title": "سبايدر مان",
-    "cover": "https://k.top4top.io/p_3901ct7ei3.jpg",
+    "cover": "https://c.top4top.io/p_3938hfiex6.jpg",
     "badge": "مترجمة",
     "description": "عيش تجربة سبايدر مان الحقيقية وانت بتتأرجح بين ناطحات السحاب في نيويورك. واجه المجرمين والأشرار، واستخدم قدراتك الخارقة في القتال والتنقل، واستمتع بقصة مشوقة وعالم مفتوح مليان مهمات وتحديات.",
     "videos": [
@@ -327,7 +327,7 @@ const GAMES = [
   {
     "id": 23,
     "title": "car mechanic simulator",
-    "cover": "https://i.top4top.io/p_3906gnadn1.jpg",
+    "cover": "https://d.top4top.io/p_3938afmbk7.jpg",
     "description": "لو بتحب العربيات والميكانيكا، اللعبة دي هتخليك تدير ورشتك بنفسك. استقبل العربيات، واكتشف الأعطال، وفكّ وركّب قطع الغيار، وصلّح المحركات، وطوّر ورشتك مع كل شغلانة جديدة في تجربة محاكاة مليانة تفاصيل.",
     "videos": [
       "https://youtu.be/LCTF8wKWFSU?si=9f6LUsxrBp4ZBQUi"
@@ -356,7 +356,7 @@ const GAMES = [
   {
     "id": 25,
     "title": "Red.Dead.Redemption 1",
-    "cover": "https://f.top4top.io/p_390612s6e1.jpg",
+    "cover": "https://e.top4top.io/p_3938ibd4q8.jpg",
     "description": "عيش حياة الغرب الأمريكي القديم في مغامرة مليانة مطاردات ومعارك بالمسدسات وركوب الخيل. هتدخل قصة جون مارستون، الخارج عن القانون سابقًا، وتتنقل بين المدن والصحاري وتواجه عصابات خطيرة في عالم مفتوح مليان أحداث.",
     "videos": [
       "https://youtu.be/jbi2Hqmcyq8?si=_ApXneZHg5g20uDJ"
