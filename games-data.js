@@ -20,10 +20,12 @@ const GAMES = [
       "https://l.top4top.io/p_3937tw0ri4.jpg"
     ],
     "highlights": [
+      "جديدة",
       "مميزة"
     ],
     "genre": "أكشن – مغامرات – عالم مفتوح – ساموراي",
     "players": "1",
+    "size": "49GB",
     "online": "بدون انترنت"
   },
   {
@@ -44,10 +46,12 @@ const GAMES = [
       "https://a.top4top.io/p_3937cwzig7.jpg"
     ],
     "highlights": [
+      "الأكثر طلبًا",
       "مناسبة لشخصين"
     ],
     "genre": "مغامرات – ألغاز – تعاونية لشخصين",
     "players": "2",
+    "size": "32GB",
     "online": "بدون انترنت"
   },
   {
@@ -67,6 +71,7 @@ const GAMES = [
     ],
     "genre": "سباقات – سيارات – عالم مفتوح",
     "players": "1",
+    "size": "13GB",
     "online": "بدون انترنت"
   },
   {
@@ -82,10 +87,12 @@ const GAMES = [
       "https://i.top4top.io/p_3937op7zr2.jpg"
     ],
     "highlights": [
+      "الأكثر طلبًا",
       "مناسبة لشخصين"
     ],
     "genre": "سباقات – دراجات نارية – قتال",
     "players": "1-4",
+    "size": "6GB",
     "online": "بدون انترنت"
   },
   {
@@ -101,10 +108,12 @@ const GAMES = [
       "https://f.top4top.io/p_39376l4482.jpg"
     ],
     "highlights": [
+      "الأكثر طلبًا",
       "مناسبة لشخصين"
     ],
     "genre": "رياضة – سيارات – كرة قدم – جماعية",
     "players": "1-4",
+    "size": "32GB",
     "online": "بدون انترنت"
   },
   {
@@ -124,6 +133,7 @@ const GAMES = [
     ],
     "genre": "مغامرات – استكشاف – ألغاز",
     "players": "1",
+    "size": "7GB",
     "online": "بدون انترنت"
   },
   {
@@ -143,6 +153,7 @@ const GAMES = [
     ],
     "genre": "أكشن – مغامرات – استكشاف – قصة",
     "players": "1",
+    "size": "45GB",
     "online": "بدون انترنت"
   },
   {
@@ -162,6 +173,7 @@ const GAMES = [
     ],
     "genre": "أكشن – تصويب – زومبي – تعاونية",
     "players": "1",
+    "size": "45GB",
     "online": "بدون انترنت"
   },
   {
@@ -182,6 +194,7 @@ const GAMES = [
     ],
     "genre": "مصارعة – رياضة – قتال",
     "players": "1-4",
+    "size": "50GB",
     "online": "بدون انترنت"
   },
   {
@@ -198,10 +211,12 @@ const GAMES = [
       "https://h.top4top.io/p_3937ztjri2.jpg"
     ],
     "highlights": [
+      "الأكثر طلبًا",
       "مناسبة لشخصين"
     ],
     "genre": "كرة قدم – رياضة",
     "players": "1-4",
+    "size": "28GB",
     "online": "بدون انترنت"
   },
   {
@@ -214,8 +229,12 @@ const GAMES = [
       "https://youtu.be/q565g_CVfhw?si=3OiAm-Ny_TCIlMNC&t=15"
     ],
     "images": [],
+    "highlights": [
+      "الأكثر طلبًا"
+    ],
     "genre": "كرة قدم – رياضة",
     "players": "1-4",
+    "size": "77GB",
     "online": "بدون انترنت"
   },
   {
@@ -228,8 +247,13 @@ const GAMES = [
       "https://youtu.be/Nn3VVL3kKI4?si=n6StcqQM9o-cC8A3&t=16"
     ],
     "images": [],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
     "genre": "كرة قدم – رياضة",
     "players": "1-4",
+    "size": "51GB",
     "online": "بدون انترنت"
   },
   {
@@ -245,8 +269,12 @@ const GAMES = [
       "https://e.top4top.io/p_3937l4mqf1.jpg",
       "https://f.top4top.io/p_39372huyr2.jpg"
     ],
+    "highlights": [
+      "مناسبة لشخصين"
+    ],
     "genre": "قتال – فنون قتالية",
     "players": "1-2",
+    "size": "60GB",
     "online": "بدون انترنت"
   },
   {
@@ -267,8 +295,12 @@ const GAMES = [
       "https://b.top4top.io/p_3937xkj2j6.jpg",
       "https://c.top4top.io/p_393730pd17.jpg"
     ],
+    "highlights": [
+      "الأكثر طلبًا"
+    ],
     "genre": "أكشن – عالم مفتوح – سيارات – جريمة",
     "players": "1",
+    "size": "42GB",
     "online": "بدون انترنت"
   },
   {
@@ -286,8 +318,12 @@ const GAMES = [
       "https://i.top4top.io/p_393739dm22.jpg",
       "https://h.top4top.io/p_3937pqfl81.jpg"
     ],
+    "highlights": [
+      "الأكثر طلبًا"
+    ],
     "genre": "أكشن – مغامرات – عالم مفتوح – أبطال خارقون",
     "players": "1",
+    "size": "39GB",
     "online": "بدون انترنت"
   },
   {
@@ -305,8 +341,13 @@ const GAMES = [
       "https://e.top4top.io/p_3937nix081.jpg",
       "https://k.top4top.io/p_3937a36o36.jpg"
     ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
     "genre": "كرة قدم – رياضة",
     "players": "1-4",
+    "size": "75GB",
     "online": "بدون انترنت"
   },
   {
@@ -322,8 +363,13 @@ const GAMES = [
       "https://b.top4top.io/p_39379pkkm1.jpg",
       "https://c.top4top.io/p_393790rt42.jpg"
     ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
     "genre": "كرة قدم – رياضة",
     "players": "1-4",
+    "size": "64GB",
     "online": "بدون انترنت"
   },
   {
@@ -343,8 +389,13 @@ const GAMES = [
       "https://a.top4top.io/p_3937afc2z5.jpg",
       "https://b.top4top.io/p_39370h8cv6.jpg"
     ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
     "genre": "منصات – مغامرات – تحديات",
     "players": "1-4",
+    "size": "14GB",
     "online": "بدون انترنت"
   },
   {
@@ -359,8 +410,13 @@ const GAMES = [
       "https://j.top4top.io/p_3937ii9c71.jpg",
       "https://k.top4top.io/p_3937seuxx2.jpg"
     ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
     "genre": "تصويب – أكشن – حرب – زومبي",
     "players": "1-4",
+    "size": "42GB",
     "online": "بدون انترنت"
   },
   {
@@ -380,8 +436,12 @@ const GAMES = [
       "https://a.top4top.io/p_3937a0dzr7.jpg",
       "https://b.top4top.io/p_3937qlu2p8.jpg"
     ],
+    "highlights": [
+      "مناسبة لشخصين"
+    ],
     "genre": "تصويب – أكشن – جماعية – زومبي",
     "players": "1-4",
+    "size": "88GB",
     "online": "بدون انترنت"
   },
   {
@@ -400,8 +460,13 @@ const GAMES = [
       "https://d.top4top.io/p_3937pss575.jpg",
       "https://e.top4top.io/p_3937ph6te6.jpg"
     ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
     "genre": "قتال – فنون قتالية",
     "players": "1-2",
+    "size": "42GB",
     "online": "بدون انترنت"
   },
   {
@@ -416,14 +481,19 @@ const GAMES = [
       "https://d.top4top.io/p_39373vtfv1.jpg",
       "https://e.top4top.io/p_3937d1vai2.jpg"
     ],
+    "highlights": [
+      "مناسبة لشخصين"
+    ],
     "genre": "قتال – أنمي – أكشن",
     "players": "1-2",
+    "size": "32GB",
     "online": "بدون انترنت"
   },
   {
     "id": 23,
     "title": "car mechanic simulator",
     "cover": "https://d.top4top.io/p_3938afmbk7.jpg",
+    "badge": "مترجمة",
     "description": "لو بتحب العربيات والميكانيكا، اللعبة دي هتخليك تدير ورشتك بنفسك. استقبل العربيات، واكتشف الأعطال، وفكّ وركّب قطع الغيار، وصلّح المحركات، وطوّر ورشتك مع كل شغلانة جديدة في تجربة محاكاة مليانة تفاصيل.",
     "videos": [
       "https://youtu.be/LCTF8wKWFSU?si=9f6LUsxrBp4ZBQUi"
@@ -434,6 +504,7 @@ const GAMES = [
     ],
     "genre": "محاكاة – سيارات – ميكانيكا",
     "players": "1",
+    "size": "9GB",
     "online": "بدون انترنت"
   },
   {
@@ -453,6 +524,7 @@ const GAMES = [
     ],
     "genre": "أكشن – بقاء – زومبي – عالم مفتوح",
     "players": "1",
+    "size": "36GB",
     "online": "بدون انترنت"
   },
   {
@@ -467,8 +539,12 @@ const GAMES = [
       "https://g.top4top.io/p_3937dlnm91.jpg",
       "https://h.top4top.io/p_39372hw9j2.jpg"
     ],
+    "highlights": [
+      "مميزة"
+    ],
     "genre": "أكشن – مغامرات – عالم مفتوح – غرب أمريكي",
     "players": "1",
+    "size": "10GB",
     "online": "بدون انترنت"
   },
   {
@@ -483,8 +559,12 @@ const GAMES = [
       "https://c.top4top.io/p_3937ciysp1.jpg",
       "https://d.top4top.io/p_3937v4prh2.jpg"
     ],
+    "highlights": [
+      "مميزة"
+    ],
     "genre": "أكشن – مغامرات – عالم مفتوح – غرب أمريكي",
     "players": "1",
+    "size": "80GB",
     "online": "بدون انترنت"
   },
   {
@@ -501,6 +581,7 @@ const GAMES = [
     ],
     "genre": "مغامرات – منصات – عائلية",
     "players": "1",
+    "size": "1GB",
     "online": "بدون انترنت"
   },
   {
@@ -517,6 +598,7 @@ const GAMES = [
     ],
     "genre": "كوميديا – ألغاز – تخطيط",
     "players": "1",
+    "size": "2GB",
     "online": "بدون انترنت"
   },
   {
@@ -531,8 +613,12 @@ const GAMES = [
       "https://h.top4top.io/p_3937hhd8f1.jpg",
       "https://i.top4top.io/p_39373hirq2.jpg"
     ],
+    "highlights": [
+      "مميزة"
+    ],
     "genre": "أكشن – مغامرات – عالم مفتوح – قراصنة",
     "players": "1",
+    "size": "7GB",
     "online": "بدون انترنت"
   },
   {
@@ -549,8 +635,12 @@ const GAMES = [
       "https://c.top4top.io/p_3937syr952.jpg",
       "https://d.top4top.io/p_3937oi39c3.jpg"
     ],
+    "highlights": [
+      "مميزة"
+    ],
     "genre": "أكشن – مغامرات – تسلل – تاريخي",
     "players": "1",
+    "size": "40GB",
     "online": "بدون انترنت"
   },
   {
@@ -565,8 +655,12 @@ const GAMES = [
       "https://l.top4top.io/p_3937jvec91.jpg",
       "https://a.top4top.io/p_3937bz0e82.jpg"
     ],
+    "highlights": [
+      "مميزة"
+    ],
     "genre": "أكشن – مغامرات – عالم مفتوح – تاريخي",
     "players": "1",
+    "size": "40GB",
     "online": "بدون انترنت"
   },
   {
@@ -582,8 +676,12 @@ const GAMES = [
       "https://i.top4top.io/p_3937zlooo1.jpg",
       "https://j.top4top.io/p_3937y04j12.jpg"
     ],
+    "highlights": [
+      "مناسبة لشخصين"
+    ],
     "genre": "أكشن – مغامرات – تعاونية لشخصين – قصة",
     "players": "2",
+    "size": "15GB",
     "online": "بدون انترنت"
   },
   {
@@ -598,8 +696,32 @@ const GAMES = [
       "https://c.top4top.io/p_3937r972b1.jpg",
       "https://d.top4top.io/p_3937dq1s32.jpg"
     ],
+    "highlights": [
+      "مميزة"
+    ],
     "genre": "باتل رويال – تصويب – بقاء – أونلاين",
     "players": "1-4",
+    "size": "17GB",
     "online": "تحتاج نت"
+  },
+  {
+    "id": 34,
+    "title": "لعبة جديدة",
+    "cover": "https://e.top4top.io/p_3939k1nsn1.jpg",
+    "description": "عيش تجربة قيادة الشاحنات العملاقة في عالم مليان بالطرق والتحديات! ابدأ مشوارك كسائق شاحنات محترف، واستلم مهام نقل البضائع وتوصيل الشحنات بين أماكن مختلفة، واتعلم إزاي تتحكم في شاحنتك وتتغلب على صعوبات الطريق. طوّر شاحنتك وحسّن أداءها، واكتشف متعة القيادة الواقعية في تجربة محاكاة مناسبة لكل عشاق الشاحنات والسواقة.",
+    "videos": [
+      "https://youtu.be/hXle0PedlCQ?si=QTcVpSYpW0QMSEba"
+    ],
+    "images": [
+      "https://i.top4top.io/p_3939g1kwy1.jpg",
+      "https://j.top4top.io/p_3939lmadu2.jpg"
+    ],
+    "highlights": [
+      "جديدة"
+    ],
+    "genre": "محاكاة – قيادة شاحنات – نقل بضائع – عالم مفتوح",
+    "players": "1",
+    "size": "3GB",
+    "online": "بدون نت"
   }
 ];
