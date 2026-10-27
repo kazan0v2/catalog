@@ -727,5 +727,29 @@ const GAMES = [
     "players": "1",
     "size": "3GB",
     "online": "بدون نت"
+  },
+  {
+    "id": 35,
+    "title": "naruto x Boruto Ultimate",
+    "cover": "https://a.top4top.io/p_395206soe1.jpg",
+    "badge": "مترجمة",
+    "description": "لعبة قتال وأكشن حماسية تجمع بين شخصيات أنمي ناروتو وبوروتو. وتضم أكبر عدد من الشخصيات القابلة للعب في سلسلة Ultimate Ninja STORM، بالإضافة إلى طور قصة مميز يغطي أبرز أحداث قصة ناروتو وساسكي وطور قصة خاص وجديد كلياً لـ بوروتو.",
+    "videos": [
+      "https://youtu.be/b7WhbaDuqkg?si=uBzn5Aft5nnBWJVt"
+    ],
+    "images": [
+      "https://b.top4top.io/p_3952s2uwg2.jpg",
+      "https://c.top4top.io/p_3952abbbz3.jpg",
+      "https://d.top4top.io/p_3952z2qp84.jpg",
+      "https://e.top4top.io/p_3952me7835.jpg"
+    ],
+    "highlights": [
+      "الأكثر طلبًا",
+      "مناسبة لشخصين"
+    ],
+    "genre": "أكشن / قتال / مغامرات",
+    "players": "1-2",
+    "size": "33GB",
+    "online": "بدون نت"
   }
 ];
