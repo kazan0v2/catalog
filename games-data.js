@@ -751,5 +751,31 @@ const GAMES = [
     "players": "1-2",
     "size": "33GB",
     "online": "بدون نت"
+  },
+  {
+    "id": 36,
+    "title": "UNCHARTED_4",
+    "cover": "https://e.top4top.io/p_3961tgkd11.jpg",
+    "badge": "مترجمة",
+    "description": "",
+    "videos": [
+      "https://youtu.be/hh5HV4iic1Y?si=sT6ppU6luINTeFZN"
+    ],
+    "images": [
+      "https://j.top4top.io/p_3961hmoa52.jpg",
+      "https://l.top4top.io/p_39619uwpg4.jpg",
+      "https://b.top4top.io/p_3961bg65p6.jpg",
+      "https://d.top4top.io/p_39618zci18.jpg",
+      "https://b.top4top.io/p_39612dxw44.jpg",
+      "https://l.top4top.io/p_3961nht092.jpg",
+      "https://f.top4top.io/p_39613ksuu1.jpg"
+    ],
+    "highlights": [
+      "جديدة"
+    ],
+    "genre": "اكشن - مغامرة",
+    "players": "1",
+    "size": "60GB",
+    "online": "بدون نت"
   }
 ];
