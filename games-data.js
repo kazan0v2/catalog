@@ -3,7 +3,7 @@ const GAMES = [
   {
     "id": 1,
     "title": "Ghost of Tsushima Director's Cut",
-    "cover": "https://j.top4top.io/p_3938p8jcr1.jpg",
+    "cover": "assets/covers/cover-1.jpg",
     "badge": "مترجمة",
     "description": "لعبة مغامرات وعالم مفتوح، بتعيش فيها قصة محارب ساموراي بيدافع عن جزيرته ضد الغزو. فيها قتال بالسيوف واستكشاف وعالم جميل",
     "videos": [
@@ -31,7 +31,7 @@ const GAMES = [
   {
     "id": 2,
     "title": "It Takes Two",
-    "cover": "https://d.top4top.io/p_390134w3c2.jpg",
+    "cover": "assets/covers/cover-2.jpg",
     "badge": "مترجمة",
     "description": "مغامرة تعاونية ممتعة لشخصين، بتلعب فيها بشخصيتين لازم يساعدوا بعض عشان يتجاوزوا التحديات ويحلوا الألغاز. كل مرحلة فيها أفكار جديدة ومواقف مضحكة ومفاجآت، ودي من أجمل الألعاب اللي ممكن تلعبها مع صاحبك أو حد من عيلتك.",
     "videos": [
@@ -58,7 +58,7 @@ const GAMES = [
   {
     "id": 3,
     "title": "Need.for.Speed",
-    "cover": "https://e.top4top.io/p_3901q34hn3.jpg",
+    "cover": "assets/covers/cover-3.jpg",
     "description": "لو بتحب السرعة والعربيات، هتعيش أجواء سباقات شوارع مليانة حماس ومطاردات مع الشرطة. اختار عربيتك، وعدّل شكلها وأداءها على مزاجك، ونافس في سباقات بالنهار والليل وسط مدينة مفتوحة مليانة تحديات.",
     "videos": [
       "https://youtu.be/YLMAvMZlCMY?si=ay2kgT6mCSSANY6i"
@@ -78,7 +78,7 @@ const GAMES = [
   {
     "id": 4,
     "title": "Road Redemption",
-    "cover": "https://b.top4top.io/p_39593uu5q1.jpg",
+    "cover": "assets/covers/cover-4.jpg",
     "description": "سباقات موتوسيكلات مليانة أكشن وقتال على الطريق، مش مجرد سباق عادي. هتسابق منافسين شرسين وتستخدم أسلحة مختلفة عشان تتغلب عليهم، وتطوّر شخصيتك وموتوسيكلاتك مع كل تحدي جديد.",
     "videos": [
       "https://youtu.be/ZDquuLDnRv4?si=wEQd1cqwVU7sg810"
@@ -99,7 +99,7 @@ const GAMES = [
   {
     "id": 5,
     "title": "Rocket League",
-    "cover": "https://j.top4top.io/p_3959n7bul1.jpg",
+    "cover": "assets/covers/cover-5.jpg",
     "description": "تخيل تلعب كورة قدم، لكن بدل اللاعبين فيه عربيات سريعة بتطير وتقفز في الهوا! لعبة رياضية ممتعة بتجمع بين القيادة والمهارة والمنافسة، وتقدر تتحدى أصحابك في ماتشات سريعة مليانة أهداف وحركات مجنونة.",
     "videos": [
       "https://youtu.be/NC82dWrFqCE?si=6SnN81ubSCNnT1YJ"
@@ -120,7 +120,7 @@ const GAMES = [
   {
     "id": 6,
     "title": "Stray",
-    "cover": "https://j.top4top.io/p_39015isx62.jpg",
+    "cover": "assets/covers/cover-6.jpg",
     "description": "مغامرة مختلفة بتتحكم فيها في قطة ضايعة وسط مدينة غامضة مليانة روبوتات وأسرار. هتستكشف الشوارع والأسطح، وتحل الألغاز، وتحاول تلاقي طريق الرجوع لعالمك. تجربة هادية ومميزة بقصة جميلة وتفاصيل بصرية رائعة.",
     "videos": [
       "https://youtu.be/Rda52S3Jah8?si=SdKkkWmgfJc5nEJ-"
@@ -140,7 +140,7 @@ const GAMES = [
   {
     "id": 7,
     "title": "UNCHARTED THE LOST LEGACY",
-    "cover": "https://d.top4top.io/p_3959yjulp3.png",
+    "cover": "assets/covers/cover-7.png",
     "description": "مغامرة سينمائية مليانة أكشن واستكشاف، بتسافر فيها وسط آثار ومعابد قديمة بحثًا عن كنز أسطوري. هتواجه أعداء، وتحل ألغاز، وتدخل مطاردات ومواقف خطيرة، وسط مناظر طبيعية رائعة وأحداث مشوقة من البداية للنهاية.",
     "videos": [
       "https://youtu.be/i8qzBkHjk_0?si=YUjv7EfmF3xcRYL2"
@@ -160,7 +160,7 @@ const GAMES = [
   {
     "id": 8,
     "title": "World.War-Z",
-    "cover": "https://l.top4top.io/p_39010h2i64.jpg",
+    "cover": "assets/covers/cover-8.jpg",
     "description": "استعد لمواجهة جيوش ضخمة من الزومبي في معارك مليانة إثارة وتوتر. اختار أسلحتك وتعاون مع فريقك عشان تنجو من الهجمات وتكمل المهمات في أماكن مختلفة حول العالم. لعبة أكشن سريعة لمحبي الزومبي والتحديات الجماعية.",
     "videos": [
       "https://youtu.be/d3ciw_v7MF0?si=HhVKbfQLmCJMB0pu"
@@ -180,7 +180,7 @@ const GAMES = [
   {
     "id": 9,
     "title": "wwe 25",
-    "cover": "https://l.top4top.io/p_3938od0pe3.jpg",
+    "cover": "assets/covers/cover-9.jpg",
     "badge": "مترجمة",
     "description": "ادخل عالم المصارعة الحرة وعيش أجواء WWE مع مجموعة كبيرة من النجوم والمصارعين. نفّذ الضربات والحركات القاضية، ونافس على البطولات، والعب ضد أصحابك في مواجهات مليانة حماس ومتعة داخل الحلبة.",
     "videos": [
@@ -201,7 +201,7 @@ const GAMES = [
   {
     "id": 10,
     "title": "بيس 19",
-    "cover": "https://e.top4top.io/p_3901ialkg2.jpg",
+    "cover": "assets/covers/cover-10.jpg",
     "badge": "مترجمة",
     "description": "عيش متعة كرة القدم بأسلوب لعب سلس وحركات واقعية للاعبين، وادخل مباريات مليانة منافسة وحماس. اختار فريقك المفضل، وحط خطتك، واستمتع بالتمريرات والتسديدات والمراوغات في تجربة كروية مناسبة لجلسات اللعب مع أصحابك.",
     "videos": [
@@ -223,7 +223,7 @@ const GAMES = [
   {
     "id": 11,
     "title": "بيس 26",
-    "cover": "https://f.top4top.io/p_3901wybzj3.jpg",
+    "cover": "assets/covers/cover-11.jpg",
     "badge": "مترجمة",
     "description": "استمتع بأجواء كرة القدم في نسخة بيس 2026 الموجودة بالكتالوج، وخوض مباريات قوية مع أصحابك. اختار فريقك، وظبط تشكيلتك، ونافس في ماتشات مليانة مهارات وأهداف وحماس لحد آخر دقيقة.",
     "videos": [
@@ -241,7 +241,7 @@ const GAMES = [
   {
     "id": 12,
     "title": "بيس 27",
-    "cover": "https://e.top4top.io/p_3959cocfy4.jpg",
+    "cover": "assets/covers/cover-12.jpg",
     "badge": "مترجمة",
     "description": "منافسة كروية وحماس مستمر مع نسخة بيس 2027 الموجودة بالكتالوج. اختار فريقك المفضل، وجهّز خطتك، وادخل تحديات ومباريات ضد أصحابك عشان تثبت مين الأفضل في الملعب.",
     "videos": [
@@ -260,7 +260,7 @@ const GAMES = [
   {
     "id": 13,
     "title": "تكن",
-    "cover": "https://f.top4top.io/p_3959vbnvq5.jpg",
+    "cover": "assets/covers/cover-13.jpg",
     "badge": "مترجمة",
     "description": "لعبة قتال ومواجهات مباشرة بتجمع شخصيات متنوعة، وكل شخصية ليها أسلوبها الخاص وحركاتها القوية. اتعلم الكومبوهات، ونفّذ الضربات المميزة، وتحدى أصحابك في جولات مليانة سرعة وتركيز وتنافس.",
     "videos": [
@@ -281,7 +281,7 @@ const GAMES = [
   {
     "id": 14,
     "title": "جاتا",
-    "cover": "https://b.top4top.io/p_3938he6qz5.jpg",
+    "cover": "assets/covers/cover-14.jpg",
     "description": "ادخل عالم مفتوح ضخم مليان مغامرات ومهمات ومطاردات بالعربيات. عيش قصص ثلاث شخصيات مختلفة، واستكشف مدينة لوس سانتوس، وجرّب القيادة والأكشن والأنشطة المتنوعة في واحدة من أشهر ألعاب العالم المفتوح.",
     "videos": [
       "https://youtu.be/hBvMSP7cI-Q?si=KzBChjP0p1IH38NZ"
@@ -307,7 +307,7 @@ const GAMES = [
   {
     "id": 15,
     "title": "سبايدر مان",
-    "cover": "https://l.top4top.io/p_39594kwm31.jpg",
+    "cover": "assets/covers/cover-15.jpg",
     "badge": "مترجمة",
     "description": "عيش تجربة سبايدر مان الحقيقية وانت بتتأرجح بين ناطحات السحاب في نيويورك. واجه المجرمين والأشرار، واستخدم قدراتك الخارقة في القتال والتنقل، واستمتع بقصة مشوقة وعالم مفتوح مليان مهمات وتحديات.",
     "videos": [
@@ -330,7 +330,7 @@ const GAMES = [
   {
     "id": 16,
     "title": "فيفا 26",
-    "cover": "https://l.top4top.io/p_3901ikllu4.jpg",
+    "cover": "assets/covers/cover-16.jpg",
     "badge": "مترجمة",
     "description": "استمتع بمنافسات كرة القدم مع نسخة فيفا 26 الموجودة بالكتالوج. اختار فريقك المفضل، ونظّم تشكيلتك، وادخل مباريات ضد أصحابك مليانة تسديدات ومراوغات وأهداف، وعيش أجواء المنافسة لحد صافرة النهاية.",
     "videos": [
@@ -354,7 +354,7 @@ const GAMES = [
   {
     "id": 17,
     "title": "فيفا 27",
-    "cover": "https://e.top4top.io/p_39164zwdo1.jpg",
+    "cover": "assets/covers/cover-17.jpg",
     "badge": "مترجمة",
     "description": "لو بتحب التحدي الكروي، استمتع بنسخة فيفا 27 الموجودة بالكتالوج. العب بفريقك المفضل، وجرّب الخطط المختلفة، وتحدى أصحابك في مباريات حماسية تحدد فيها مين ملك الملعب.",
     "videos": [
@@ -376,7 +376,7 @@ const GAMES = [
   {
     "id": 18,
     "title": "كراش",
-    "cover": "https://f.top4top.io/p_3901n6ttk1.jpg",
+    "cover": "assets/covers/cover-18.jpg",
     "badge": "مترجمة",
     "description": "مغامرات مليانة جري وقفز وتحديات مع شخصية كراش المحبوبة. عدّي العقبات، واجمع المكافآت، وواجه الأعداء في مراحل ملونة وممتعة، لكن خلي بالك لأن كل مرحلة محتاجة سرعة وتركيز وتوقيت مضبوط.",
     "videos": [
@@ -402,7 +402,7 @@ const GAMES = [
   {
     "id": 19,
     "title": "كولف ديوتي بلاك اوبس 3",
-    "cover": "https://h.top4top.io/p_3959ymcij7.jpg",
+    "cover": "assets/covers/cover-19.jpg",
     "description": "ادخل معارك مستقبلية مليانة أكشن وأسلحة متطورة ومواجهات نارية. خوض مهمات قتالية مشوقة، وواجه الأعداء باستخدام قدرات وتقنيات مختلفة، واستمتع بأجواء الحرب السريعة اللي بتحتاج تركيز ورد فعل قوي.",
     "videos": [
       "https://youtu.be/qAUYNIDEJ6o?si=0gviHoknkT0Puyh2"
@@ -423,7 +423,7 @@ const GAMES = [
   {
     "id": 20,
     "title": "كولف ديوتي بلاك اوبس 4",
-    "cover": "https://h.top4top.io/p_3901qd01c3.jpg",
+    "cover": "assets/covers/cover-20.jpg",
     "description": "تجربة تصويب مليانة معارك سريعة ومنافسات قوية، مع شخصيات وأسلحة وأساليب قتال متنوعة. ادخل مواجهات جماعية، وجرّب طور الزومبي، واختبر مهاراتك في التصويب والتخطيط وسط أجواء أكشن مستمرة.",
     "videos": [
       "https://youtu.be/sH7nfJmPWek?si=8OEfqYJazPgop2A4"
@@ -448,7 +448,7 @@ const GAMES = [
   {
     "id": 21,
     "title": "مورتال كومبات",
-    "cover": "https://l.top4top.io/p_3959bkcu33.jpg",
+    "cover": "assets/covers/cover-21.jpg",
     "description": "استعد لمواجهات قتالية قوية بين شخصيات أسطورية، كل واحدة ليها قدرات وحركات خاصة. نفّذ الكومبوهات والضربات القاضية، وتحدى أصحابك في جولات مليانة إثارة، واثبت مين الأقوى في ساحة القتال.",
     "videos": [
       "https://youtu.be/U_-tQDcslk8?si=J3Xbxk8wMCcyLiuu&t=134"
@@ -473,7 +473,7 @@ const GAMES = [
   {
     "id": 22,
     "title": "Naruto.Shippuden.Ultimate.Ninja.Storm.4",
-    "cover": "https://b.top4top.io/p_3959539sl1.png",
+    "cover": "assets/covers/cover-22.png",
     "badge": "مترجمة",
     "description": "ادخل عالم ناروتو وعيش أشهر المعارك بين شخصيات الأنمي المحبوبة. استخدم تقنيات النينجا والهجمات الخاصة، وواجه خصومك في قتالات سريعة ومليانة مؤثرات بصرية، واستمتع بلحظات مميزة من قصة ناروتو شيبودن.",
     "videos": [
@@ -494,7 +494,7 @@ const GAMES = [
   {
     "id": 23,
     "title": "car mechanic simulator",
-    "cover": "https://d.top4top.io/p_3938afmbk7.jpg",
+    "cover": "assets/covers/cover-23.jpg",
     "badge": "مترجمة",
     "description": "لو بتحب العربيات والميكانيكا، اللعبة دي هتخليك تدير ورشتك بنفسك. استقبل العربيات، واكتشف الأعطال، وفكّ وركّب قطع الغيار، وصلّح المحركات، وطوّر ورشتك مع كل شغلانة جديدة في تجربة محاكاة مليانة تفاصيل.",
     "videos": [
@@ -512,7 +512,7 @@ const GAMES = [
   {
     "id": 24,
     "title": "Dynamic Days Gone",
-    "cover": "https://f.top4top.io/p_39060inhz1.jpg",
+    "cover": "assets/covers/cover-24.jpg",
     "description": "مغامرة بقاء وعالم مفتوح بعد انتشار وباء حوّل أعداد ضخمة من البشر لمخلوقات خطيرة. هتلعب بشخصية راكب موتوسيكل بيحاول ينجو وسط عالم قاسي، وتواجه جحافل من المصابين، وتستكشف الأماكن المهجورة وتطور أسلحتك وموتوسيكلِك.",
     "videos": [
       "https://youtu.be/D3_EFHlDBFg?si=oiHe8XRpmTBoE9ek"
@@ -532,7 +532,7 @@ const GAMES = [
   {
     "id": 25,
     "title": "Red.Dead.Redemption 1",
-    "cover": "https://e.top4top.io/p_3938ibd4q8.jpg",
+    "cover": "assets/covers/cover-25.jpg",
     "description": "عيش حياة الغرب الأمريكي القديم في مغامرة مليانة مطاردات ومعارك بالمسدسات وركوب الخيل. هتدخل قصة جون مارستون، الخارج عن القانون سابقًا، وتتنقل بين المدن والصحاري وتواجه عصابات خطيرة في عالم مفتوح مليان أحداث.",
     "videos": [
       "https://youtu.be/jbi2Hqmcyq8?si=_ApXneZHg5g20uDJ"
@@ -552,7 +552,7 @@ const GAMES = [
   {
     "id": 26,
     "title": "Red.Dead.Redemption 2",
-    "cover": "https://j.top4top.io/p_39590vjjw9.png",
+    "cover": "assets/covers/cover-26.png",
     "description": "واحدة من أروع تجارب العالم المفتوح، بتعيش فيها حياة آرثر مورجان وسط عصابة في الغرب الأمريكي. استكشف الجبال والغابات والمدن، واركب الخيل، وادخل معارك ومطاردات، واستمتع بقصة قوية وعالم مليان تفاصيل واقعية.",
     "videos": [
       "https://youtu.be/ASAJfbLILg8?si=VDvC3TdemMdC2Hqb"
@@ -572,7 +572,7 @@ const GAMES = [
   {
     "id": 27,
     "title": "toy story 3",
-    "cover": "https://j.top4top.io/p_39062fma91.jpg",
+    "cover": "assets/covers/cover-27.jpg",
     "description": "انطلق في مغامرة ممتعة مع وودي وباز وشخصيات توي ستوري المحبوبة. استكشف الأماكن المختلفة، وحل الألغاز، واجمع العناصر، وعيش أجواء الفيلم في لعبة خفيفة ومسلية مناسبة للأطفال ومحبي عالم ديزني وبيكسار.",
     "videos": [
       "https://youtu.be/6h1vOAXufAI?si=XqeBlur2iF5OqwgX"
@@ -589,7 +589,7 @@ const GAMES = [
   {
     "id": 28,
     "title": "Neighbours Back From Hell",
-    "cover": "https://b.top4top.io/p_39598pxax5.jpg",
+    "cover": "assets/covers/cover-28.jpg",
     "badge": "مترجمة",
     "description": "لعبة كوميدية بتعتمد على الذكاء والمقالب، وهدفك إنك تعمل مقالب مضحكة لجارك من غير ما يمسكك. استخدم الأدوات الموجودة في البيت، وخطط لتحركاتك، واستخبى في الوقت المناسب عشان تنفذ أكبر عدد من المقالب وتعدّي المراحل.",
     "videos": [
@@ -607,7 +607,7 @@ const GAMES = [
   {
     "id": 29,
     "title": "Assassin’s Creed IV - Black Flag",
-    "cover": "https://l.top4top.io/p_3919sgdk31.jpg",
+    "cover": "assets/covers/cover-29.jpg",
     "description": "عيش حياة القراصنة في عالم مفتوح وسط البحار والجزر الاستوائية. قُد سفينتك، وادخل معارك بحرية، واستكشف الجزر والكنوز، وخوض مغامرات البطل إدوارد كينواي في واحدة من أجمل تجارب القتال والاستكشاف البحري.",
     "videos": [
       "https://youtu.be/wIhHSDt03WM?si=96nhSaj73KmQCfU2"
@@ -627,7 +627,7 @@ const GAMES = [
   {
     "id": 30,
     "title": "Assassins Creed Mirage",
-    "cover": "https://b.top4top.io/p_395961p0c3.jpg",
+    "cover": "assets/covers/cover-30.jpg",
     "description": "ارجع لأجواء بغداد القديمة في مغامرة مليانة أسرار وتخفي واغتيالات. العب بشخصية باسم، واتنقل فوق أسطح المباني وبين الأسواق والشوارع، ونفّذ مهماتك بذكاء وسرعة، واكتشف قصة مشوقة وسط عالم تاريخي مليان تفاصيل.",
     "videos": [
       "https://youtu.be/PPoU4EFeVEI?si=_r0Qw59zEVe4AwSN",
@@ -649,7 +649,7 @@ const GAMES = [
   {
     "id": 31,
     "title": "Assassin's Creed Origins",
-    "cover": "https://b.top4top.io/p_3919qkysg3.jpg",
+    "cover": "assets/covers/cover-31.jpg",
     "description": "سافر لزمن مصر القديمة وعيش مغامرة وسط الأهرامات والمعابد والصحاري والمدن التاريخية. العب بشخصية بايك، واكتشف أسرار قصة مليانة أحداث، وخوض معارك ضد الأعداء، واستكشف عالم مفتوح ضخم مستوحى من الحضارة المصرية.",
     "videos": [
       "https://youtu.be/L8CQnwqFhJ8?si=Hgw8k6V10jc_B3IR"
@@ -669,7 +669,7 @@ const GAMES = [
   {
     "id": 32,
     "title": "A Way Out",
-    "cover": "https://l.top4top.io/p_3959g6yxi2.jpg",
+    "cover": "assets/covers/cover-32.jpg",
     "badge": "مترجمة",
     "description": "مغامرة تعاونية لشخصين بتبدأ بمحاولة هروب جريئة من السجن، وبعدها بتتحول لرحلة مليانة مطاردات وأكشن ومواقف غير متوقعة. كل لاعب بيتحكم في شخصية مختلفة، ولازم تتعاونوا مع بعض عشان تتجاوزوا العقبات وتكملوا القصة للنهاية.",
     "videos": [
@@ -690,7 +690,7 @@ const GAMES = [
   {
     "id": 33,
     "title": "Fortnite",
-    "cover": "https://d.top4top.io/p_3959yrhcr5.jpg",
+    "cover": "assets/covers/cover-33.jpg",
     "description": "ادخل عالم Fortnite وعيش أجواء الباتل رويال المليانة أكشن ومغامرات. انزل ساحة المعركة، واجمع الأسلحة والمعدات، وابنِ دفاعاتك، وواجه المنافسين عشان تكون آخر لاعب صامد. لعبة مليانة تحديات ومفاجآت، تقدر تستمتع فيها بمواجهات حماسية لوحدك أو مع أصحابك.",
     "videos": [
       "https://youtu.be/NylPGoNlGvc?si=wJUaBPYWQEf_4NAP"
@@ -710,7 +710,7 @@ const GAMES = [
   {
     "id": 34,
     "title": "Truck Driver",
-    "cover": "https://e.top4top.io/p_3939k1nsn1.jpg",
+    "cover": "assets/covers/cover-34.jpg",
     "badge": "مترجمة",
     "description": "عيش تجربة قيادة الشاحنات العملاقة في عالم مليان بالطرق والتحديات! ابدأ مشوارك كسائق شاحنات محترف، واستلم مهام نقل البضائع وتوصيل الشحنات بين أماكن مختلفة، واتعلم إزاي تتحكم في شاحنتك وتتغلب على صعوبات الطريق. طوّر شاحنتك وحسّن أداءها، واكتشف متعة القيادة الواقعية في تجربة محاكاة مناسبة لكل عشاق الشاحنات والسواقة.",
     "videos": [
@@ -731,7 +731,7 @@ const GAMES = [
   {
     "id": 35,
     "title": "naruto x Boruto Ultimate",
-    "cover": "https://e.top4top.io/p_3959xe9c56.png",
+    "cover": "assets/covers/cover-35.png",
     "badge": "مترجمة",
     "description": "لعبة قتال وأكشن حماسية تجمع بين شخصيات أنمي ناروتو وبوروتو. وتضم أكبر عدد من الشخصيات القابلة للعب في سلسلة Ultimate Ninja STORM، بالإضافة إلى طور قصة مميز يغطي أبرز أحداث قصة ناروتو وساسكي وطور قصة خاص وجديد كلياً لـ بوروتو.",
     "videos": [
@@ -755,7 +755,7 @@ const GAMES = [
   {
     "id": 36,
     "title": "UNCHARTED_4",
-    "cover": "https://e.top4top.io/p_3961tgkd11.jpg",
+    "cover": "assets/covers/cover-36.jpg",
     "badge": "مترجمة",
     "description": "",
     "videos": [
@@ -780,21 +780,20 @@ const GAMES = [
   },
   {
     "id": 37,
-    "title": "بلور",
-    "cover": "https://e.top4top.io/p_3974lhw2t1.jpg",
-    "description": "استعد لتجربة سباق فريدة من نوعها تجمع بين السرعة الجنونية والإثارة القتالية في لعبة Blur! نافس أصدقاءك في سباقات حماسية تعتمد على المهارة واستخدام الأسلحة والقوى المدمرة (Power-ups) المنتشرة في المضمار لتتعقب خصومك وتفجر سياراتهم في اللحظة الأخيرة. تدعم اللعبة اللعب الجماعي المحلي لتحدي أصدقائك وجهاً لوجه على نفس الشاشة، مع سيارات حقيقية ورخص رسمية وتصميمات حلبات مذهلة في أشهر مدن العالم. لعبة لا غنى عنها في أي جلسة تحدي وحماس",
+    "title": "Truck Driver",
+    "cover": "assets/covers/cover-37.jpg",
+    "badge": "مترجمة",
+    "description": "عيش تجربة قيادة الشاحنات العملاقة في عالم مليان بالطرق والتحديات! ابدأ مشوارك كسائق شاحنات محترف، واستلم مهام نقل البضائع وتوصيل الشحنات بين أماكن مختلفة، واتعلم إزاي تتحكم في شاحنتك وتتغلب على صعوبات الطريق. طوّر شاحنتك وحسّن أداءها، واكتشف متعة القيادة الواقعية في تجربة محاكاة مناسبة لكل عشاق الشاحنات والسواقة.",
     "videos": [
-      "https://youtu.be/7SLIdDZ1aGQ?si=PGOtfs_a9_V2ovQF"
+      "https://youtu.be/hXle0PedlCQ?si=PD90Me2bKn3wXsMb"
     ],
     "images": [],
     "highlights": [
-      "جديدة",
-      "مناسبة لشخصين",
-      "مميزة"
+      "جديدة"
     ],
-    "genre": "سباق",
-    "players": "1/4",
-    "size": "6GB",
+    "genre": "محاكاة – قيادة شاحنات – نقل بضائع – عالم مفتوح",
+    "players": "1",
+    "size": "3GB",
     "online": "بدون نت"
   }
 ];
